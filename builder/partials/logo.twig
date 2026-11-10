@@ -1,0 +1,20 @@
+{#
+	The logo in the top bar: a thistle. It takes its color from .bill-logo in
+	theme.css, so it follows the brand. To use a client's logo, replace the <svg>
+	below with theirs and remove its fill colors, or swap in an <img> tag.
+	The top bar nudges this drawing up to center it (.nav .bill-logo in theme.css),
+	so remove that rule when you swap the logo.
+
+	If a page shows the logo twice, pass a different logoId the second time,
+	because the mask below needs an id of its own: with {logoId: 'seal'}.
+#}
+{% set logoId = logoId|default('nav') %}
+<svg class="bill-logo" viewBox="0 0 40 48" aria-hidden="true" fill="currentColor">
+	<mask id="logo-scales-{{ logoId }}">
+		<circle cx="20" cy="29" r="9.5" fill="#fff"/>
+		<path d="M-8 13l32 32M24 13l-32 32M0 13l32 32M32 13l-32 32M8 13l32 32M40 13l-32 32M16 13l32 32M48 13l-32 32" stroke="#000" stroke-width="1.5"/>
+	</mask>
+	<path d="M13.63 21.54L3.82 12.24L15.69 18.7zM14.7 19.69L7.07 6.2L17.54 17.63zM16.3 18.26L12.74 1.65L19.62 17.18zM18.25 17.4L20 0L21.75 17.4zM20.38 17.18L27.26 1.65L23.7 18.26zM22.46 17.63L32.93 6.2L25.3 19.69zM24.31 18.7L36.18 12.24L26.37 21.54z"/>
+	<rect y="19" width="40" height="20" mask="url(#logo-scales-{{ logoId }})"/>
+	<path d="M19 38.5h2V48h-2zM21 45.5c2-3 6-5.5 11-6.5-1.5 4-5.5 7-11 8.5zM19 45.5c-2-3-6-5.5-11-6.5 1.5 4 5.5 7 11 8.5z"/>
+</svg>

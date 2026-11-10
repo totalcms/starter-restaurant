@@ -1,0 +1,62 @@
+{
+    "id": "contact",
+    "title": "Contact",
+    "route": "/contact",
+    "template": "contact",
+    "draft": false,
+    "nav": true,
+    "data": [],
+    "middleware": [],
+    "accessGroups": [],
+    "accessCollection": "",
+    "status": 200,
+    "redirectTo": "",
+    "sitemap": true,
+    "changeFrequency": "",
+    "priority": 0,
+    "updated": "2026-11-09T23:44:35-05:00",
+    "created": "2026-10-29T06:41:30+00:00",
+    "seo": {
+        "id": "seo",
+        "title": "Hours and Directions | Copper Thistle, Portland, Maine",
+        "socialTitle": "Visit Copper Thistle",
+        "description": "Find Copper Thistle on Harbor Street in Portland, Maine. See our opening hours, get directions, or call or email us about a table.",
+        "socialDescription": "Our hours, our address on Harbor Street, and how to reach us.",
+        "image": {
+            "alt": "A table set with linen napkins and a white plate",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "",
+            "height": 1600,
+            "link": "",
+            "mime": "image/jpeg",
+            "name": "14-table.jpg",
+            "palette": [
+                "#a4a5ab",
+                "#745934",
+                "#1b160d",
+                "#9a7a58",
+                "#625d58"
+            ],
+            "size": 258965,
+            "tags": [],
+            "uploadDate": "2026-11-05T04:53:17+00:00",
+            "width": 2400,
+            "credit": {
+                "author": "Maria Tyutina",
+                "source": "Pexels",
+                "sourceUrl": "https://www.pexels.com/photo/close-up-of-a-dinner-table-setting-7651664/",
+                "license": "Pexels License"
+            }
+        },
+        "noindex": false,
+        "nofollow": false,
+        "jsonldType": ""
+    }
+}

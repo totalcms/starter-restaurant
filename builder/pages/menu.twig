@@ -1,0 +1,41 @@
+{#
+	The full menu, grouped by section. Sections appear in the order of the
+	Menu Section options in the menu-item schema (Starters, Mains, Sides…), and
+	the dishes inside each section by their Order number.
+	On a wide screen the sections flow into two columns, like a printed menu.
+#}
+{% extends 'layouts/default.twig' %}
+
+{% block content %}
+	{% set items = cms.collection.objects('menu')|sortCollection([{property: 'order'}]) %}
+
+	<section class="center" data-max="xl" aria-labelledby="menu-heading">
+		<div class="stack" data-gap="3xl">
+			<header class="bill-masthead" data-size="page">
+				<h1 id="menu-heading">Menu</h1>
+				<p class="lede">Our menu follows the seasons, so a few dishes change every week.</p>
+			</header>
+
+			{% include 'partials/specials.twig' %}
+
+			{# "bill-columns" sets the sections in two columns once there is room. #}
+			<div class="bill-columns">
+				{# One block per section. A section with no dishes is skipped. #}
+				{% for section in ['Starters', 'Mains', 'Sides', 'Desserts', 'Drinks'] %}
+					{% set dishes = items|filter(item => item.section == section) %}
+					{% if dishes is not empty %}
+						<section class="stack" data-gap="lg" aria-labelledby="section-{{ loop.index }}">
+							<h2 id="section-{{ loop.index }}" class="divider bill-head">{{ section }}</h2>
+							<div class="leaders" data-gap="lg">
+								{% for item in dishes %}
+									{# The description is not indexed, so load the full record. #}
+									{% include 'partials/menu-item.twig' with {item: cms.collection.object('menu', item.id)} %}
+								{% endfor %}
+							</div>
+						</section>
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+{% endblock %}

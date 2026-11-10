@@ -1,0 +1,66 @@
+{
+    "$schema": "https:\/\/json-schema.org\/draft\/2020-12\/schema",
+    "$id": "https:\/\/www.totalcms.co\/schemas\/custom\/hours-row.json",
+    "type": "object",
+    "id": "hours-row",
+    "description": "One day of the restaurant's opening hours. Used as a row in the Hours table on the Restaurant Info object.",
+    "properties": {
+        "id": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/slug.json",
+            "label": "Key",
+            "help": "Lowercase day name, e.g. monday. Lets templates reach one day directly.",
+            "field": "id",
+            "settings": {
+                "autogen": "${day}"
+            }
+        },
+        "day": {
+            "type": "string",
+            "label": "Day",
+            "help": "Day of the week this row describes.",
+            "field": "select",
+            "options": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+            ],
+            "default": "Monday"
+        },
+        "opens": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/time.json",
+            "label": "Opens",
+            "help": "Opening time, 24-hour HH:MM. Leave empty when the restaurant is closed this day.",
+            "field": "time"
+        },
+        "closes": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/time.json",
+            "label": "Closes",
+            "help": "Closing time, 24-hour HH:MM. Leave empty when the restaurant is closed this day.",
+            "field": "time"
+        },
+        "closed": {
+            "type": "boolean",
+            "label": "Closed",
+            "help": "Turn on when the restaurant is closed all day. The site then shows Closed instead of times.",
+            "field": "toggle",
+            "default": false
+        }
+    },
+    "required": [
+        "id",
+        "day"
+    ],
+    "index": [
+        "id",
+        "day",
+        "opens",
+        "closes",
+        "closed"
+    ],
+    "updated": "2026-10-29T06:37:41+00:00",
+    "category": "Restaurant"
+}

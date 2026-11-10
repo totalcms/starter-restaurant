@@ -1,0 +1,43 @@
+{
+    "id": "change-a-dishs-photo",
+    "summary": "Swap in a new photo and describe it for people who can't see it.",
+    "content": "1. In the sidebar on the far left, select the **Collections** icon, then **Menu**.\n2. Select the dish to open it.\n3. Scroll down to **Photo** and move your pointer over the picture. A row of small buttons appears.\n4. Select **Upload New Image** and choose your photo.\n5. When the upload finishes, select **Edit Image Info** from the same row of buttons.\n6. In **Alt Text**, describe the photo in one short sentence, such as \"A bowl of pappardelle with chanterelles\".\n7. Scroll to the bottom and select **Save**.\n\nAlt text is read aloud to guests who use a screen reader, and it helps search engines understand the photo.\n\n## Before you upload\n\n- A landscape photo works best.\n- You don't need to resize anything. The website makes the right size for every screen.\n- Need a better shot? Read [Take better food photos](ext/totalcms/client-help/post/take-better-food-photos).",
+    "extra": "",
+    "draft": false,
+    "featured": false,
+    "title": "Change a dish's photo",
+    "date": "2026-11-02T00:00:00+00:00",
+    "author": "Sam Keller",
+    "media": "",
+    "categories": [
+        "Menu"
+    ],
+    "tags": [
+        "menu",
+        "photos"
+    ],
+    "image": {
+        "alt": "",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "0b9e9d46",
+        "height": 0,
+        "link": "",
+        "mime": "",
+        "name": "",
+        "palette": [],
+        "size": 0,
+        "tags": [],
+        "uploadDate": "2026-11-05T18:45:14+00:00",
+        "width": 0
+    },
+    "gallery": [],
+    "updated": "2026-11-05T18:46:15+00:00",
+    "created": "2026-11-05T18:45:14+00:00"
+}

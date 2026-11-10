@@ -1,0 +1,37 @@
+{#
+	Today's specials, in a box printed in the brand color: every Special whose
+	Starts date is today or earlier and whose Ends date is today or later.
+	Nothing to edit here — add a Special in the admin with the right dates and
+	it appears and disappears on its own. With no specials, the box is hidden.
+#}
+{% set specials = cms.collection.objects('specials')|filterCollection([
+	{property: 'startDate', operator: 'pastToday'},
+	{property: 'endDate', operator: 'futureToday'}
+]) %}
+
+{# No wrapper of its own: the page that includes it decides the width. #}
+{% if specials is not empty %}
+	<section class="bill-today stack" data-gap="xl" aria-labelledby="specials-heading">
+		<h2 id="specials-heading" class="divider bill-head">Today's specials</h2>
+		<span class="bill-seal">{% include 'partials/logo.twig' with {logoId: 'seal'} %}</span>
+
+		{# A grid fits as many specials to a row as there is room for. #}
+		<div class="grid" data-min="sm" data-columns="2" data-gap="xl">
+			{% for special in specials %}
+				<article class="stack" data-gap="sm">
+					{% if special.image.name|default('') %}
+						<figure class="bill-plate" {% if special.featured == true %}style="border-color: var(--yeti-color-primary)"{% endif %}>
+              {{ cms.render.image(special, {w: 800, h: 450, fit: 'crop'}, {collection: 'specials', property: 'image'}) }}
+            </figure>
+					{% endif %}
+					<div class="leaders" data-row>
+						<h3>{{ special.title }}</h3>
+						{% if special.price %}<strong data-numeric>{{ special.price|price }}</strong>{% endif %}
+					</div>
+					{# The description is not in the collection index, so fetch the full object for it. #}
+					<p>{{ cms.collection.object('specials', special.id).description }}</p>
+				</article>
+			{% endfor %}
+		</div>
+	</section>
+{% endif %}

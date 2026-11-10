@@ -1,0 +1,131 @@
+{
+    "$schema": "https:\/\/json-schema.org\/draft\/2020-12\/schema",
+    "$id": "https:\/\/www.totalcms.co\/schemas\/custom\/restaurant-info.json",
+    "type": "object",
+    "id": "restaurant-info",
+    "description": "The restaurant's details: name, contact, opening hours, the home page photo and the About page story. The collection holds a single object; the header, footer and every page read from it.",
+    "properties": {
+        "id": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/slug.json",
+            "label": "ID",
+            "help": "Set automatically to the collection id (info). The templates look the object up by it.",
+            "field": "id"
+        },
+        "name": {
+            "type": "string",
+            "label": "Restaurant Name",
+            "help": "The restaurant's name as guests know it. Shown in the header, footer and page titles.",
+            "field": "text"
+        },
+        "tagline": {
+            "type": "string",
+            "label": "Tagline",
+            "help": "One short line about the restaurant, shown under the name on the home page. About ten words.",
+            "field": "text"
+        },
+        "heroImage": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/image.json",
+            "label": "Home Page Photo",
+            "help": "The large photo beside the restaurant name on the home page. A landscape shot of the dining room or a signature dish works best.",
+            "field": "image"
+        },
+        "address": {
+            "type": "string",
+            "label": "Address",
+            "help": "Street address on two or three lines, as a guest would type it into a map.",
+            "field": "textarea"
+        },
+        "phone": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/phone.json",
+            "label": "Phone",
+            "help": "Phone number for reservations and questions. Shown as a tap-to-call link.",
+            "field": "phone"
+        },
+        "email": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/email.json",
+            "label": "Email",
+            "help": "Email address for general questions and private events.",
+            "field": "email"
+        },
+        "mapUrl": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/url.json",
+            "label": "Map Link",
+            "help": "A link to the restaurant on Google Maps or Apple Maps. Used for the Get Directions button.",
+            "field": "url"
+        },
+        "reservationUrl": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/url.json",
+            "label": "Reservation Link",
+            "help": "Link to the booking page (OpenTable, Resy, etc.). Leave empty to hide the Book a Table buttons.",
+            "field": "url"
+        },
+        "hours": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/deck.json",
+            "label": "Opening Hours",
+            "help": "One row per day of the week, in the order they should be listed.",
+            "field": "deckTable",
+            "schemaref": "https:\/\/www.totalcms.co\/schemas\/custom\/hours-row.json",
+            "settings": {
+                "deckItemLabel": "${day}"
+            },
+            "patternProperties": {
+                "^[a-zA-Z]\\w*$": {
+                    "$ref": "https:\/\/www.totalcms.co\/schemas\/custom\/hours-row.json"
+                }
+            }
+        },
+        "hoursNote": {
+            "type": "string",
+            "label": "Hours Note",
+            "help": "Optional short note shown under the hours, such as when the kitchen closes or holiday changes.",
+            "field": "text"
+        },
+        "story": {
+            "type": "string",
+            "label": "Our Story",
+            "help": "The About page text: who runs the restaurant, where the food comes from, what a guest should expect. Three or four short paragraphs.",
+            "field": "styledtext"
+        },
+        "storyImage": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/image.json",
+            "label": "Story Photo",
+            "help": "Photo shown beside Our Story on the About page, such as the chef or the kitchen.",
+            "field": "image"
+        },
+        "updated": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/date.json",
+            "label": "Updated",
+            "help": "Set automatically when the object is saved.",
+            "field": "datetime",
+            "settings": {
+                "onUpdate": true,
+                "readonly": true
+            }
+        },
+        "created": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/date.json",
+            "label": "Created",
+            "help": "Set automatically when the object is created.",
+            "field": "datetime",
+            "settings": {
+                "onCreate": true,
+                "readonly": true
+            }
+        }
+    },
+    "required": [
+        "id",
+        "name"
+    ],
+    "index": [
+        "id",
+        "name",
+        "phone",
+        "email",
+        "updated",
+        "created"
+    ],
+    "formgrid": "id name\ntagline tagline\nheroImage heroImage\naddress address\nphone email\nmapUrl reservationUrl\nhours hours\nhoursNote hoursNote\nstory story\nstoryImage storyImage\nupdated created",
+    "updated": "2026-10-29T06:39:43+00:00",
+    "category": "Restaurant"
+}

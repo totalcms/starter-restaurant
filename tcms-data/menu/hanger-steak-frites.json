@@ -1,0 +1,46 @@
+{
+    "id": "hanger-steak-frites",
+    "name": "Hanger Steak Frites",
+    "section": "Mains",
+    "price": 36,
+    "description": "Grilled hanger steak, hand-cut fries and green peppercorn sauce.",
+    "dietary": [],
+    "image": {
+        "alt": "Grilled steak with hand-cut fries and a pot of sauce",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "b4cd4948",
+        "height": 3200,
+        "link": "",
+        "mime": "image/jpeg",
+        "name": "pexels-photo-15661093.jpeg",
+        "palette": [
+            "#cfa965",
+            "#8e8d99",
+            "#8a6650",
+            "#9d9ea8",
+            "#613e32"
+        ],
+        "size": 991927,
+        "tags": [],
+        "uploadDate": "2026-10-30T03:48:35+00:00",
+        "width": 2400,
+        "credit": {
+            "author": "Nadin Sh",
+            "authorUrl": "https://www.pexels.com/@nadin-sh-78971847/",
+            "source": "Pexels",
+            "sourceUrl": "https://www.pexels.com/photo/fries-and-meat-15661093/",
+            "license": "Pexels License"
+        }
+    },
+    "featured": false,
+    "order": 3,
+    "updated": "2026-11-09T23:44:38-05:00",
+    "created": "2026-10-29T06:38:44+00:00"
+}

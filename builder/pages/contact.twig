@@ -1,0 +1,38 @@
+{#
+	Contact page: how to reach and find the restaurant, and the full hours.
+	Everything here comes from Restaurant Info.
+#}
+{% extends 'layouts/default.twig' %}
+
+{# The usual head tags, plus Restaurant structured data. #}
+{% block seo %}{% include 'partials/seo-restaurant.twig' %}{% endblock %}
+
+{% block content %}
+	<section class="center" data-max="lg" aria-labelledby="contact-heading">
+		<div class="stack" data-gap="3xl">
+			<header class="bill-masthead" data-size="page">
+				<h1 id="contact-heading">Find us</h1>
+				<p class="lede">Walk-ins are always welcome. For groups of six or more, please call ahead.</p>
+			</header>
+
+			<div class="columns" data-threshold="sm" data-gap="2xl">
+				<div class="stack" data-gap="md">
+					<h2 class="divider bill-head">Address</h2>
+					<address>{{ info.address|nl2br }}</address>
+					{% if info.mapUrl %}<p><a class="button bill-flip" href="{{ info.mapUrl }}" data-emphasis="medium">Get directions</a></p>{% endif %}
+				</div>
+				<div class="stack" data-gap="md">
+					<h2 class="divider bill-head">Get in touch</h2>
+					{% if info.phone %}<p><a href="tel:{{ info.phone|replace({' ': '', '(': '', ')': '', '-': ''}) }}">{{ info.phone }}</a></p>{% endif %}
+					{% if info.email %}<p><a href="mailto:{{ info.email }}">{{ info.email }}</a></p>{% endif %}
+					{% if info.reservationUrl %}<p><a class="button" href="{{ info.reservationUrl }}">Book a table</a></p>{% endif %}
+				</div>
+			</div>
+
+			<div class="stack" data-gap="md">
+				<h2 class="divider bill-head">Hours</h2>
+				{% include 'partials/hours.twig' %}
+			</div>
+		</div>
+	</section>
+{% endblock %}

@@ -1,0 +1,42 @@
+{
+    "id": "your-brand-at-a-glance",
+    "summary": "Your colors, font and logo, for anyone making a flyer or a printed menu.",
+    "content": "Hand this page to anyone designing something for the restaurant, such as a printer or a local magazine.\n\n## Colors\n\n| Color | Hex |\n|---|---|\n| Thistle green | `#00452D` |\n| Deep green | `#001D10` |\n| Copper | `#EC9B6D` |\n\n## Font\n\nThe website uses **Archivo**, a free font from Google Fonts. Headlines are heavy and all capitals.\n\n## Logo\n\nUse the copper thistle on a dark green background. Please don't stretch it, recolor it or put it over a busy photo. Ask me for the original files, because a copy saved from the website won't print well.\n\n## How you sound\n\nWarm, plain and short. You write the way a good server talks: you know the food, and you don't show off about it.",
+    "extra": "",
+    "draft": false,
+    "featured": false,
+    "title": "Your brand at a glance",
+    "date": "2026-11-02T00:00:00+00:00",
+    "author": "Sam Keller",
+    "media": "",
+    "categories": [
+        "Your Website"
+    ],
+    "tags": [
+        "brand"
+    ],
+    "image": {
+        "alt": "",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "0b9e9d46",
+        "height": 0,
+        "link": "",
+        "mime": "",
+        "name": "",
+        "palette": [],
+        "size": 0,
+        "tags": [],
+        "uploadDate": "2026-11-05T18:45:17+00:00",
+        "width": 0
+    },
+    "gallery": [],
+    "updated": "2026-11-05T18:45:17+00:00",
+    "created": "2026-11-05T18:45:17+00:00"
+}

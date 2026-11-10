@@ -1,0 +1,42 @@
+{
+    "id": "your-care-plan",
+    "summary": "What's included each month, and how quickly I'll get back to you.",
+    "content": "## What's included\n\n- Software updates and security fixes\n- Nightly backups, kept for 30 days\n- Up to one hour of changes a month, such as hours, new photos or About page updates\n- A check that the site is online, around the clock\n\n## How fast I'll respond\n\n| When | Reply |\n|---|---|\n| Site is down | Within 1 hour, any day |\n| Hours or closure changes | Same day, if sent before 3 p.m. on a weekday |\n| Everything else | Within 1 business day |\n\n## Not included\n\nNew pages, a redesign, and work that goes over your monthly hour. I'll always give you a price before I start.\n\n## Reach me\n\nSam Keller, Keller Web Studio\n\nText or call: (207) 555-0188\n\nEmail: sam@kellerwebstudio.example",
+    "extra": "",
+    "draft": false,
+    "featured": false,
+    "title": "Your care plan",
+    "date": "2026-11-02T00:00:00+00:00",
+    "author": "Sam Keller",
+    "media": "",
+    "categories": [
+        "Accounts & Support"
+    ],
+    "tags": [
+        "support"
+    ],
+    "image": {
+        "alt": "",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "0b9e9d46",
+        "height": 0,
+        "link": "",
+        "mime": "",
+        "name": "",
+        "palette": [],
+        "size": 0,
+        "tags": [],
+        "uploadDate": "2026-11-05T18:45:18+00:00",
+        "width": 0
+    },
+    "gallery": [],
+    "updated": "2026-11-05T18:45:18+00:00",
+    "created": "2026-11-05T18:45:18+00:00"
+}

@@ -1,0 +1,48 @@
+{
+	"name": "totalcms/starter-restaurant",
+	"description": "Copper Thistle: a restaurant site for Total CMS, with a menu, daily specials, a photo gallery and a dashboard for the restaurant's staff.",
+	"homepage": "https://totalcms.co",
+	"support": {
+		"docs": "https://docs.totalcms.co",
+		"email": "support@totalcms.co"
+	},
+	"authors": [
+		{
+			"name": "Joe Workman",
+			"homepage": "https://totalcms.co"
+		}
+	],
+	"keywords": [
+		"cms",
+		"flat-file",
+		"flat-file-cms",
+		"no-database",
+		"headless-cms",
+		"content-management",
+		"php-cms",
+		"twig",
+		"slim",
+		"json",
+		"total-cms",
+		"totalcms",
+		"totalcms-starter"
+	],
+	"type": "project",
+	"license": "proprietary",
+	"prefer-stable": true,
+	"require": {
+		"php": ">=8.2",
+		"totalcms/cms": "^3.6.8"
+	},
+	"config": {
+		"allow-plugins": {
+			"totalcms/cms": true,
+			"php-http/discovery": true
+		}
+	},
+	"scripts": {
+		"post-create-project-cmd": [
+			"@php bin/post-install.php"
+		]
+	}
+}

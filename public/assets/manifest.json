@@ -1,0 +1,29 @@
+{
+  "css/style.css": {
+    "file": "style-DPJA1L4r.css",
+    "name": "style",
+    "names": [
+      "style.css"
+    ],
+    "src": "css/style.css",
+    "isEntry": true,
+    "assets": [
+      "archivo-latin-DXrUVZxZ.woff2",
+      "archivo-latin-italic-DBRr7JAK.woff2"
+    ]
+  },
+  "fonts/archivo-latin-italic.woff2": {
+    "file": "archivo-latin-italic-DBRr7JAK.woff2",
+    "src": "fonts/archivo-latin-italic.woff2"
+  },
+  "fonts/archivo-latin.woff2": {
+    "file": "archivo-latin-DXrUVZxZ.woff2",
+    "src": "fonts/archivo-latin.woff2"
+  },
+  "js/app.js": {
+    "file": "app-BvRk9kiK.js",
+    "name": "app",
+    "src": "js/app.js",
+    "isEntry": true
+  }
+}

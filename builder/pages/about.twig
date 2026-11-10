@@ -1,0 +1,30 @@
+{#
+	About page: the Our Story text and Story Photo from Restaurant Info.
+#}
+{% extends 'layouts/default.twig' %}
+
+{% block content %}
+	<section class="center" data-max="xl" aria-labelledby="about-heading">
+		<div class="stack" data-gap="2xl">
+			<header class="bill-masthead" data-size="page">
+				<h1 id="about-heading">Our story</h1>
+			</header>
+
+			{# Yeti's media recipe puts the photo beside the text, and stacks them on a phone. #}
+			<div class="media" data-width="sm" data-ratio="4/3" data-gap="2xl" data-align="start">
+				<figure class="bill-plate">
+					{% if info.storyImage.name|default('') %}
+						{{ cms.render.image(info, {w: 900, h: 675, fit: 'crop'}, {collection: 'info', property: 'storyImage'}) }}
+					{% else %}
+						{# An inline SVG counts as a picture to Yeti, so the layout keeps its shape. #}
+						<svg viewBox="0 0 4 3" aria-hidden="true"><rect width="4" height="3" fill="currentColor"/></svg>
+					{% endif %}
+				</figure>
+				<div class="stack" data-gap="md">
+					{# Our Story is rich text (HTML), so print it with |raw. #}
+					{{ info.story|raw }}
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

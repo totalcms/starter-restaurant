@@ -1,0 +1,16 @@
+{#
+	One dish on the menu: the name, a dotted leader and the price on one line,
+	then the description and any dietary notes. Expects `item`, a Menu object.
+#}
+<article>
+	{# A row of Yeti's "leaders": a long name wraps, and the line and price stay on its last line. #}
+	<h3>{{ item.name }}</h3>
+	<strong data-numeric>{{ item.price|price }}</strong>
+
+	{% if item.description %}<p>{{ item.description }}</p>{% endif %}
+
+	{# Dietary notes print in small capitals, separated by dots: "Vegetarian · Gluten-free". #}
+	{% if item.dietary %}
+		<p class="bill-notes">{{ item.dietary|join(' · ') }}</p>
+	{% endif %}
+</article>

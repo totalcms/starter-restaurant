@@ -1,0 +1,32 @@
+{
+    "id": "client-help",
+    "schema": "blogdown",
+    "name": "Client Help",
+    "description": "A collection of client-help objects that conform to the blogdown schema.",
+    "url": "",
+    "category": "",
+    "labelPlural": "Posts",
+    "labelSingular": "Post",
+    "groups": [],
+    "publicOperations": [],
+    "requireBotProtection": false,
+    "sortBy": "id",
+    "reverseSort": false,
+    "prettyUrl": false,
+    "singleton": false,
+    "format": "json",
+    "publicRegistration": false,
+    "requireEmailVerification": false,
+    "registrationGroups": [],
+    "ownerProperty": "",
+    "ownerCollection": "",
+    "accessCollection": "",
+    "queueRebuildOnSave": false,
+    "count": 15,
+    "totalObjects": 15,
+    "lastUpdated": "2026-11-09T23:44:37-05:00",
+    "updated": "2026-11-05T18:36:49+00:00",
+    "feed": {
+        "enabled": false
+    }
+}

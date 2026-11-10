@@ -1,0 +1,54 @@
+{
+    "id": "start-here",
+    "summary": "A quick tour of your website dashboard and where everything lives.",
+    "content": "Your website is built so you can keep the day-to-day details fresh without calling me. Everything you need is in the sidebar on the far left of this screen. It shows icons, and hovering over one shows its name.\n\n## The sidebar\n\n- **Home** is the page you land on when you sign in.\n- **Collections** holds your **Menu** and **Specials**. This is where you'll spend most of your time.\n- **How-To** is this help area. I wrote everything here for you and your team.\n\n## The three things you'll do most\n\n1. [Change a price](ext/totalcms/client-help/post/change-a-price)\n2. [Add a weekly special](ext/totalcms/client-help/post/add-a-weekly-special)\n3. [Change a dish's photo](ext/totalcms/client-help/post/change-a-dishs-photo)\n\n## You can't break it\n\nThe design and page layouts are out of reach from your account, so nothing you do here can change how the site is built. If you make a typo, open the same item and fix it. Your changes appear on the website as soon as you save.",
+    "extra": "",
+    "draft": false,
+    "featured": true,
+    "title": "Start here",
+    "date": "2026-11-02T00:00:00+00:00",
+    "author": "Sam Keller",
+    "media": "",
+    "categories": [
+        "Getting Started"
+    ],
+    "tags": [
+        "basics"
+    ],
+    "image": {
+        "alt": "The dining room in the evening",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "b49e5363",
+        "height": 1600,
+        "link": "",
+        "mime": "image/jpeg",
+        "name": "01-hero.jpg",
+        "palette": [
+            "#2d180b",
+            "#f9d39b",
+            "#831c05",
+            "#eaa254",
+            "#90a6b5"
+        ],
+        "size": 517536,
+        "tags": [],
+        "uploadDate": "2026-11-05T18:45:12+00:00",
+        "width": 2400,
+        "credit": {
+            "author": "Jonathan Borba",
+            "source": "Pexels",
+            "sourceUrl": "https://www.pexels.com/photo/interior-of-restaurant-14590691/",
+            "license": "Pexels License"
+        }
+    },
+    "gallery": [],
+    "updated": "2026-11-09T23:44:37-05:00",
+    "created": "2026-11-05T18:45:12+00:00"
+}

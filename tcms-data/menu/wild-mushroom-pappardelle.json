@@ -1,0 +1,48 @@
+{
+    "id": "wild-mushroom-pappardelle",
+    "name": "Wild Mushroom Pappardelle",
+    "section": "Mains",
+    "price": 27,
+    "description": "House-made spinach ribbons with chanterelles, basil and aged pecorino.",
+    "dietary": [
+        "Vegetarian"
+    ],
+    "image": {
+        "alt": "Spinach pappardelle with chanterelles and basil",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "c5815994",
+        "height": 1800,
+        "link": "",
+        "mime": "image/jpeg",
+        "name": "pexels-photo-27298485.jpeg",
+        "palette": [
+            "#c5bdb3",
+            "#bcaf9b",
+            "#693711",
+            "#2c271c",
+            "#9d7c33"
+        ],
+        "size": 468407,
+        "tags": [],
+        "uploadDate": "2026-10-30T03:48:40+00:00",
+        "width": 2400,
+        "credit": {
+            "author": "Nadin Sh",
+            "authorUrl": "https://www.pexels.com/@nadin-sh-78971847/",
+            "source": "Pexels",
+            "sourceUrl": "https://www.pexels.com/photo/a-bowl-of-pasta-with-greens-and-cheese-27298485/",
+            "license": "Pexels License"
+        }
+    },
+    "featured": false,
+    "order": 4,
+    "updated": "2026-11-09T23:44:39-05:00",
+    "created": "2026-10-29T06:38:44+00:00"
+}

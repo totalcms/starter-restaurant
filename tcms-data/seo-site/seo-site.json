@@ -1,0 +1,151 @@
+{
+    "id": "seo-site",
+    "siteName": "Copper Thistle",
+    "baseUrl": "",
+    "titleTemplate": "${title} | ${site}",
+    "socialTitleTemplate": "${title}",
+    "defaultDescription": "Seasonal cooking from a wood-fired kitchen on Harbor Street in Portland, Maine. See the menu, check today's hours and book a table.",
+    "defaultSocialDescription": "",
+    "defaultImage": {
+        "alt": "Copper Thistle: seasonal cooking from a wood-fired kitchen on Harbor Street, Portland, Maine, beside a pan flaring over the flame",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "35a18fb0",
+        "height": 630,
+        "link": "",
+        "mime": "image/jpeg",
+        "name": "social-card.jpg",
+        "palette": [
+            "#c6c4c1",
+            "#6f6b68",
+            "#c99169",
+            "#5b473f",
+            "#d07d35"
+        ],
+        "size": 72534,
+        "tags": [],
+        "uploadDate": "2026-11-05T15:40:40+00:00",
+        "width": 1200
+    },
+    "twitterHandle": "@copperthistleme",
+    "organizationName": "Copper Thistle",
+    "organizationLogo": {
+        "alt": "Copper Thistle logo",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "894fe283",
+        "height": 900,
+        "link": "",
+        "mime": "image/png",
+        "name": "organization-logo.png",
+        "palette": [
+            "#ec9c6c",
+            "#f09c6c",
+            "#f09c6c",
+            "#f09c6c",
+            "#f09c6c"
+        ],
+        "size": 18933,
+        "tags": [],
+        "uploadDate": "2026-11-05T04:53:14+00:00",
+        "width": 900
+    },
+    "icon": {
+        "alt": "The Copper Thistle thistle mark",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "e90a21ca",
+        "height": 1024,
+        "link": "",
+        "mime": "image/png",
+        "name": "icon.png",
+        "palette": [
+            "#eb9b6b",
+            "#584b32",
+            "#976e4c",
+            "#041c14",
+            "#725c3c"
+        ],
+        "size": 19579,
+        "tags": [],
+        "uploadDate": "2026-11-05T15:11:26-05:00",
+        "width": 1024
+    },
+    "touchIcon": {
+        "alt": "",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "f8a5f1bc",
+        "height": 512,
+        "link": "",
+        "mime": "image/png",
+        "name": "touchIcon.png",
+        "palette": [
+            "#eb9b6c",
+            "#614f37",
+            "#041c14",
+            "#9c704e",
+            "#866444"
+        ],
+        "size": 17406,
+        "tags": [],
+        "uploadDate": "2026-11-05T15:11:27-05:00",
+        "width": 512
+    },
+    "iconSvg": {
+        "tags": [],
+        "password": "",
+        "uploadDate": "2026-11-05T15:11:27-05:00",
+        "protected": true,
+        "mime": "image/svg+xml",
+        "download": "icon.svg",
+        "name": "icon.svg",
+        "ext": "svg",
+        "comments": "",
+        "size": 710,
+        "count": 0
+    },
+    "themeColor": {
+        "hex": "#00452d",
+        "oklch": {
+            "l": 34.512,
+            "c": 0.075,
+            "h": 162.18
+        }
+    },
+    "sameAs": "https://www.instagram.com/copperthistleme\nhttps://www.facebook.com/copperthistleme\nhttps://x.com/copperthistleme",
+    "contactEmail": "",
+    "contactUrl": "",
+    "metaTags": "",
+    "emitJsonLd": true,
+    "emitSocial": true,
+    "emitGenerator": true,
+    "indexNowEnabled": false,
+    "indexNowKey": "36rgpfrs4itk3z6qes1ejtbco78tsu6a",
+    "created": "2026-11-05T04:53:14+00:00",
+    "updated": "2026-11-09T23:44:40-05:00"
+}

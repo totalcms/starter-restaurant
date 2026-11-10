@@ -1,0 +1,42 @@
+{
+    "id": "if-something-looks-wrong",
+    "summary": "What to check first, and what to send me.",
+    "content": "## Your change isn't showing\n\n1. Reload the page on the website.\n2. Open the item again and check that your change is there. If it isn't, it wasn't saved, so make it again and select **Save** at the bottom.\n3. Is it a special? Check that its [dates include today](ext/totalcms/client-help/post/add-a-weekly-special).\n\n## You can't find something\n\nYou only see **Menu** and **Specials**, so the rest of the website is out of sight. If you need something changed, [it may be one for me](ext/totalcms/client-help/post/what-you-can-change).\n\n## You see \"Access Denied\"\n\nThat page isn't part of your account. Nothing has gone wrong. Select **Home** in the sidebar to go back.\n\n## The website is down\n\nText me straight away at (207) 555-0188. Please include:\n\n- What you were looking at\n- What you expected to see\n- A screenshot, if you can take one\n\nKeep passwords and guest details out of any screenshots you send.",
+    "extra": "",
+    "draft": false,
+    "featured": false,
+    "title": "If something looks wrong",
+    "date": "2026-11-02T00:00:00+00:00",
+    "author": "Sam Keller",
+    "media": "",
+    "categories": [
+        "Accounts & Support"
+    ],
+    "tags": [
+        "support"
+    ],
+    "image": {
+        "alt": "",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "0b9e9d46",
+        "height": 0,
+        "link": "",
+        "mime": "",
+        "name": "",
+        "palette": [],
+        "size": 0,
+        "tags": [],
+        "uploadDate": "2026-11-05T18:45:18+00:00",
+        "width": 0
+    },
+    "gallery": [],
+    "updated": "2026-11-05T18:45:18+00:00",
+    "created": "2026-11-05T18:45:18+00:00"
+}

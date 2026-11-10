@@ -1,0 +1,52 @@
+{
+    "id": "robots",
+    "title": "Robots",
+    "route": "/robots.txt",
+    "template": "robots",
+    "draft": false,
+    "nav": false,
+    "data": {
+        "blockCrawlers": false
+    },
+    "middleware": [],
+    "accessGroups": [],
+    "accessCollection": "",
+    "status": 200,
+    "redirectTo": "",
+    "sitemap": false,
+    "changeFrequency": "",
+    "priority": 0,
+    "updated": "2026-11-09T23:51:46-05:00",
+    "created": "2026-11-05T04:53:36+00:00",
+    "seo": {
+        "id": "seo",
+        "title": "",
+        "socialTitle": "",
+        "description": "",
+        "socialDescription": "",
+        "image": {
+            "alt": "",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "",
+            "height": 0,
+            "link": "",
+            "mime": "",
+            "name": "",
+            "palette": [],
+            "size": 0,
+            "tags": [],
+            "uploadDate": "2026-11-05T04:53:36+00:00",
+            "width": 0
+        },
+        "noindex": false,
+        "nofollow": false,
+        "jsonldType": ""
+    }
+}

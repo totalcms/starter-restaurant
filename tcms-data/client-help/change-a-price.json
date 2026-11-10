@@ -1,0 +1,56 @@
+{
+    "id": "change-a-price",
+    "summary": "Update the price of any dish in under a minute.",
+    "content": "1. In the sidebar on the far left, select the **Collections** icon, which looks like a stack of cards.\n2. Select **Menu**.\n3. Find the dish. Typing part of its name in the filter box at the top shortens the list.\n4. Select the dish to open it.\n5. Select the **Price** field and type the new price. Use numbers only, because the dollar sign is added for you.\n6. Scroll to the bottom and select **Save**.\n\nOpen your website and reload the menu page. The new price is already there.\n\n## Good to know\n\n- The price appears everywhere the dish does, including the home page, so you only change it once.\n- Leave the **ID** box alone. It's grey because it can't be edited.",
+    "extra": "",
+    "draft": false,
+    "featured": true,
+    "title": "Change a price",
+    "date": "2026-11-02T00:00:00+00:00",
+    "author": "Sam Keller",
+    "media": "",
+    "categories": [
+        "Menu"
+    ],
+    "tags": [
+        "menu",
+        "prices"
+    ],
+    "image": {
+        "alt": "A bowl of spinach pappardelle with chanterelles",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "08a386a0",
+        "height": 1800,
+        "link": "",
+        "mime": "image/jpeg",
+        "name": "08-pasta.jpg",
+        "palette": [
+            "#c5bdb3",
+            "#bcaf9b",
+            "#693711",
+            "#2c271c",
+            "#9d7c33"
+        ],
+        "size": 468407,
+        "tags": [],
+        "uploadDate": "2026-11-05T18:45:13+00:00",
+        "width": 2400,
+        "credit": {
+            "author": "Nadin Sh",
+            "authorUrl": "https://www.pexels.com/@nadin-sh-78971847/",
+            "source": "Pexels",
+            "sourceUrl": "https://www.pexels.com/photo/a-bowl-of-pasta-with-greens-and-cheese-27298485/",
+            "license": "Pexels License"
+        }
+    },
+    "gallery": [],
+    "updated": "2026-11-09T23:44:36-05:00",
+    "created": "2026-11-05T18:45:13+00:00"
+}

@@ -1,0 +1,87 @@
+{#
+	Home page, set like the top of a printed menu: today's date and hours,
+	the restaurant's name, the photo, today's specials, a few featured dishes,
+	and the hours and address.
+#}
+{% extends 'layouts/default.twig' %}
+
+{# The usual head tags, plus Restaurant structured data. #}
+{% block seo %}{% include 'partials/seo-restaurant.twig' %}{% endblock %}
+
+{% block content %}
+	{# ---- Masthead ----------------------------------------------------- #}
+	<section class="center" data-max="2xl" aria-labelledby="headline">
+		<div class="stack" data-gap="2xl">
+			<header class="bill-masthead">
+				{% include 'partials/dateline.twig' %}
+				{# The name fills the card on one line. --bill-name-length sets its size; see .billboard in theme.css. #}
+				<h1 id="headline" class="billboard" data-fit="lg-display" style="--bill-name-length: {{ info.name|length }}">{{ info.name }}</h1>
+				<p class="lede">{{ info.tagline }}</p>
+				<div class="cluster" data-justify="center" data-gap="sm">
+					{% if info.reservationUrl %}<a class="button" href="{{ info.reservationUrl }}">Book a table</a>{% endif %}
+					<a class="button bill-flip" href="{{ cms.builder.url('menu') }}" data-emphasis="medium">See the menu</a>
+				</div>
+			</header>
+
+			{#
+				The photo is the Home Page Photo in Restaurant Info, cropped wide. Until one is uploaded, a tinted panel holds its place.
+				cms.render.image() takes its alt text from the image itself (the Alt field in the admin), so don't hard-code one here.
+			#}
+			<figure class="bill-plate">
+				{% if info.heroImage.name|default('') %}
+					{{ cms.render.image(info, {w: 1800, h: 771, fit: 'crop'}, {collection: 'info', property: 'heroImage', loading: 'eager'}) }}
+				{% else %}
+					<svg viewBox="0 0 21 9" aria-hidden="true"><rect width="21" height="9" fill="currentColor"/></svg>
+				{% endif %}
+			</figure>
+		</div>
+	</section>
+
+	{# ---- Today's specials (hidden when there are none) ---------------- #}
+	<div class="center" data-max="xl">{% include 'partials/specials.twig' %}</div>
+
+	{# ---- Featured dishes ---------------------------------------------- #}
+	{# Every Menu item with Featured turned on, in menu order. #}
+	{% set featured = cms.collection.objects('menu')|filterCollection([
+		{property: 'featured', operator: 'equal', value: true}
+	])|sortCollection([{property: 'order'}]) %}
+
+	{% if featured is not empty %}
+		<section class="center" data-max="xl" aria-labelledby="featured-heading">
+			<div class="stack" data-gap="xl">
+				<h2 id="featured-heading" class="divider bill-head">From the kitchen</h2>
+				{# "bill-featured": on a phone each dish is a small photo beside its menu line; on a wider screen, up to four across. #}
+				<div class="bill-featured">
+					{% for item in featured %}
+						<article>
+							{% if item.image.name|default('') %}
+								<figure class="bill-plate">{{ cms.render.image(item, {w: 600, h: 450, fit: 'crop'}, {collection: 'menu', property: 'image'}) }}</figure>
+							{% endif %}
+							<div class="leaders" data-row>
+								<h3>{{ item.name }}</h3>
+								<strong data-numeric>{{ item.price|price }}</strong>
+							</div>
+						</article>
+					{% endfor %}
+				</div>
+				<div class="cluster" data-justify="center"><a class="button bill-flip" href="{{ cms.builder.url('menu') }}" data-emphasis="medium">See the full menu</a></div>
+			</div>
+		</section>
+	{% endif %}
+
+	{# ---- Hours and location ------------------------------------------- #}
+	<section class="center" data-max="lg" aria-labelledby="visit-heading">
+		<div class="columns" data-threshold="sm" data-gap="2xl">
+			<div class="stack" data-gap="md">
+				<h2 id="visit-heading" class="divider bill-head">Hours</h2>
+				{% include 'partials/hours.twig' %}
+			</div>
+			<div class="stack" data-gap="md">
+				<h2 class="divider bill-head">Find us</h2>
+				<address>{{ info.address|nl2br }}</address>
+				{% if info.phone %}<p><a href="tel:{{ info.phone|replace({' ': '', '(': '', ')': '', '-': ''}) }}">{{ info.phone }}</a></p>{% endif %}
+				{% if info.mapUrl %}<p><a class="button bill-flip" href="{{ info.mapUrl }}" data-emphasis="medium">Get directions</a></p>{% endif %}
+			</div>
+		</div>
+	</section>
+{% endblock %}

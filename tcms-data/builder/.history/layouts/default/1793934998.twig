@@ -1,0 +1,47 @@
+{#
+	The layout every page extends. It holds what is the same on every page —
+	the <head>, the nav and the footer — and each page fills in {% block content %}.
+
+	Two names you will see everywhere:
+	  page — the Site Builder page being shown (title, route, data…)
+	  info — the restaurant's details, edited in the admin under Restaurant Info
+#}
+{% set info = cms.collection.object('info', 'info') %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	{# Title, description, social cards and structured data, built from the page's SEO settings. Don't add a <title> by hand. #}
+	{% block seo %}{{ cms.seo.head(page) }}{% endblock %}
+
+	{# Total CMS's own CSS for the parts it renders, such as the photo gallery and its lightbox. #}
+	{{ cms.assetsHead() }}
+
+	{# Yeti, the CSS framework, then this site's theme, built from css/. Change colors and fonts in css/theme.css. #}
+	{{ cms.builder.css('css/style.css') }}
+
+	{% block head %}{% endblock %}
+</head>
+
+{#
+	"shell" is Yeti's page skeleton: header on top, footer pinned to the bottom of short pages.
+	The body is the menu's colored cover; <main> is the white card laid on it ("bill" in theme.css).
+#}
+<body class="shell" data-gap="sm">
+	{# Lets keyboard and screen-reader users jump past the nav. #}
+	<a href="#content">Skip to content</a>
+
+	{% include 'partials/nav.twig' %}
+
+	<main id="content" class="bill stack enter" data-enter="rise" data-gap="2xl">
+		{% block content %}{% endblock %}
+	</main>
+
+	{% include 'partials/footer.twig' %}
+
+	{# Total CMS's own JavaScript, such as the gallery lightbox. Keep it just before </body>. #}
+	{{ cms.assetsBody() }}
+</body>
+</html>

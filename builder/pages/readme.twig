@@ -1,0 +1,73 @@
+{#
+	A walkthrough for the person setting this site up: how the restaurant
+	starter works and what to change for a real client. It is not in the nav,
+	the sitemap or search results. Delete the "readme" page in Site Builder
+	(and this file) before the site goes live.
+#}
+{% extends 'layouts/default.twig' %}
+
+{% block content %}
+	<article class="center" data-max="md" aria-labelledby="readme-heading">
+		<div class="stack" data-gap="xl">
+			<header class="stack" data-gap="sm">
+				<h1 id="readme-heading">How this site works</h1>
+				<p class="lede">A tour of the restaurant starter: where each part of the site is edited, and what to change before you hand it to a client.</p>
+			</header>
+
+			<div class="alert" data-variant="primary" role="note">
+				<p>Sign in at <a href="/admin">/admin</a> to follow along. Every change below shows on the site as soon as you save; there is no publish step.</p>
+			</div>
+
+			<section class="stack" data-gap="md" aria-labelledby="tour-heading">
+				<h2 id="tour-heading">Where things are edited</h2>
+				<table class="table">
+					<thead>
+						<tr><th scope="col">On the site</th><th scope="col">In the admin</th></tr>
+					</thead>
+					<tbody>
+						<tr><td>Name, tagline, address, phone, hours, home page photo, About story</td><td><strong>Restaurant Info</strong>. One form holds them all, and every page reads from it.</td></tr>
+						<tr><td>The menu</td><td><strong>Menu</strong>. One entry per dish, with its section, price and dietary notes.</td></tr>
+						<tr><td>Today's specials</td><td><strong>Specials</strong>. Each has a start and an end date.</td></tr>
+						<tr><td>Gallery photos</td><td><strong>Gallery</strong> &rarr; restaurant. Drag to reorder.</td></tr>
+						<tr><td>Pages and the nav</td><td><strong>Site Builder</strong>. Drag pages to reorder the nav.</td></tr>
+						<tr><td>Page titles and search descriptions</td><td><strong>Site Builder</strong> &rarr; a page &rarr; SEO</td></tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section class="stack" data-gap="md" aria-labelledby="try-heading">
+				<h2 id="try-heading">Try it</h2>
+				<ol class="stack" data-gap="sm">
+					<li><strong>Change a price.</strong> Open Menu, pick a dish, change its price, save, and refresh the <a href="{{ cms.builder.url('menu') }}">menu</a>.</li>
+					<li><strong>Run a special.</strong> Add a Special with today as both Starts and Ends. It shows on the home page and the menu today, and hides itself tomorrow.</li>
+					<li><strong>Feature a dish.</strong> Turn on Featured for a menu item and it joins "From the kitchen" on the <a href="{{ cms.builder.url('home') }}">home page</a>.</li>
+					<li><strong>Close for a day.</strong> In Restaurant Info, turn on Closed for a day in the hours table. The footer, home page and contact page all update.</li>
+				</ol>
+			</section>
+
+			<section class="stack" data-gap="md" aria-labelledby="handover-heading">
+				<h2 id="handover-heading">Before you hand it over</h2>
+				<ul class="stack" data-gap="sm">
+					<li>Replace everything in <strong>Restaurant Info</strong>: name, address, phone, email, map and booking links, hours and story.</li>
+					<li>Replace the menu and specials, and delete the demo ones.</li>
+					<li>Upload the client's own photos. The demo photos are stock photos from Pexels, credited in <code>CREDITS.md</code>.</li>
+					<li>Set the brand colors and fonts in <code>css/theme.css</code>. Most rebrands change only the first few lines.</li>
+					<li>Replace the thistle logo with the client's in <code>builder/partials/logo.twig</code>.</li>
+					<li>Leave the <strong>Reservation Link</strong> empty if the restaurant doesn't take bookings online; the "Book a table" buttons disappear.</li>
+					<li>Delete this page: remove "readme" in Site Builder and <code>builder/pages/readme.twig</code>.</li>
+				</ul>
+			</section>
+
+			<section class="stack" data-gap="md" aria-labelledby="code-heading">
+				<h2 id="code-heading">Under the hood</h2>
+				<p>The templates are in <code>builder/</code> and are plain Twig with a comment at the top of each file explaining what it does. Styling comes from <a href="https://foundationcss.com/yeti/">Yeti</a>: layout and components are class names and <code>data-*</code> attributes, so there is very little CSS of your own to maintain.</p>
+				<ul class="stack" data-gap="xs">
+					<li><code>layouts/default.twig</code>: the page frame every page shares</li>
+					<li><code>partials/</code>: the nav, footer, hours, specials and a menu item</li>
+					<li><code>pages/</code>: one template per page</li>
+				</ul>
+				<p>To change a menu section's name or add one, edit the Menu Section options in the <strong>menu-item</strong> schema, then the list of sections at the top of <code>pages/menu.twig</code>.</p>
+			</section>
+		</div>
+	</article>
+{% endblock %}

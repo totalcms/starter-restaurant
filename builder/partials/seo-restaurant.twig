@@ -1,0 +1,57 @@
+{#
+	Writes the page's <head> tags and adds a Restaurant to its structured data,
+	so search engines can read the address, phone and hours. Everything comes
+	from Restaurant Info, so it stays in step with what the page shows.
+
+	Total CMS doesn't write Restaurant data itself, so the page hands it to
+	cms.seo.head() and it joins the same JSON-LD block as everything else.
+
+	The address is split assuming its last line reads "City, ST 12345". Any other
+	shape is sent as one line, which is still valid.
+#}
+{% set seo = cms.seo.data(page) %}
+{% set base = seo.site.baseUrl %}
+
+{% set addressLines = info.address|replace({"\r": ''})|split("\n") %}
+{% set cityLine = addressLines|last|split(',') %}
+{% set postal = {'@type': 'PostalAddress', 'streetAddress': info.address|replace({"\r": '', "\n": ', '})} %}
+{% if addressLines|length > 1 and cityLine|length == 2 %}
+	{% set stateZip = cityLine[1]|trim|split(' ') %}
+	{% set postal = {
+		'@type': 'PostalAddress',
+		'streetAddress': addressLines|slice(0, -1)|join(', '),
+		'addressLocality': cityLine[0]|trim,
+		'addressRegion': stateZip|first,
+		'postalCode': stateZip|length > 1 ? stateZip|last : ''
+	} %}
+{% endif %}
+
+{% set openingHours = [] %}
+{% for row in info.hours %}
+	{% if not row.closed and row.opens and row.closes %}
+		{% set openingHours = openingHours|merge([{
+			'@type': 'OpeningHoursSpecification',
+			'dayOfWeek': row.day,
+			'opens': row.opens,
+			'closes': row.closes
+		}]) %}
+	{% endif %}
+{% endfor %}
+
+{% set restaurant = {
+	'@type': 'Restaurant',
+	'@id': base ~ '/#restaurant',
+	'name': info.name,
+	'description': info.tagline,
+	'url': base ~ '/',
+	'telephone': info.phone,
+	'email': info.email,
+	'address': postal,
+	'openingHoursSpecification': openingHours,
+	'hasMenu': base ~ cms.builder.url('menu'),
+	'hasMap': info.mapUrl,
+	'image': seo.ogImage,
+	'acceptsReservations': info.reservationUrl ? info.reservationUrl : false
+} %}
+
+{{ cms.seo.head(page, {jsonld: [restaurant]}) }}

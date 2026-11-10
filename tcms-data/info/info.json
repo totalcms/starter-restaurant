@@ -1,0 +1,131 @@
+{
+    "id": "info",
+    "name": "Copper Thistle",
+    "tagline": "Seasonal cooking from a wood-fired kitchen on Harbor Street.",
+    "heroImage": {
+        "alt": "The dining room at Copper Thistle: wood tables and warm evening light",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "5a0969fb",
+        "height": 1600,
+        "link": "",
+        "mime": "image/jpeg",
+        "name": "pexels-photo-14590691.jpeg",
+        "palette": [
+            "#2d180b",
+            "#f9d39b",
+            "#831c05",
+            "#eaa254",
+            "#90a6b5"
+        ],
+        "size": 517536,
+        "tags": [],
+        "uploadDate": "2026-10-30T03:48:00-04:00",
+        "width": 2400,
+        "credit": {
+            "author": "Jonathan Borba",
+            "source": "Pexels",
+            "sourceUrl": "https://www.pexels.com/photo/interior-of-restaurant-14590691/",
+            "license": "Pexels License"
+        }
+    },
+    "address": "214 Harbor Street\nPortland, ME 04101",
+    "phone": "(123) 555-0142",
+    "email": "hello@copperthistle.example",
+    "mapUrl": "https://maps.google.com/?q=214+Harbor+Street+Portland+ME",
+    "reservationUrl": "https://www.opentable.com/",
+    "hours": {
+        "monday": {
+            "id": "monday",
+            "day": "Monday",
+            "opens": "",
+            "closes": "",
+            "closed": true
+        },
+        "tuesday": {
+            "id": "tuesday",
+            "day": "Tuesday",
+            "opens": "17:00",
+            "closes": "22:00",
+            "closed": false
+        },
+        "wednesday": {
+            "id": "wednesday",
+            "day": "Wednesday",
+            "opens": "17:00",
+            "closes": "22:00",
+            "closed": false
+        },
+        "thursday": {
+            "id": "thursday",
+            "day": "Thursday",
+            "opens": "17:00",
+            "closes": "22:00",
+            "closed": false
+        },
+        "friday": {
+            "id": "friday",
+            "day": "Friday",
+            "opens": "17:00",
+            "closes": "23:00",
+            "closed": false
+        },
+        "saturday": {
+            "id": "saturday",
+            "day": "Saturday",
+            "opens": "11:30",
+            "closes": "23:00",
+            "closed": false
+        },
+        "sunday": {
+            "id": "sunday",
+            "day": "Sunday",
+            "opens": "11:30",
+            "closes": "21:00",
+            "closed": false
+        }
+    },
+    "hoursNote": "The kitchen takes its last order 30 minutes before close.",
+    "story": "<p>Copper Thistle opened in 2019 in a former ship chandlery on Harbor Street, with one wood-fired oven and a menu that changed every week.</p><p>Chef Maria Alvarez cooks with what the boats and farms around Portland bring in: day-boat scallops, oysters from the Damariscotta River, and vegetables from three farms within an hour of the kitchen. If it isn't in season, it isn't on the menu.</p><p>The room seats forty-two, with eight more at the bar. Come for a weeknight supper or a long Saturday lunch; either way, we'd like you to stay a while.</p>",
+    "storyImage": {
+        "alt": "The chef sliding a peel into the wood-fired oven",
+        "exif": {
+            "copyright": "All rights reserved"
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "b1e9e7d0",
+        "height": 1602,
+        "link": "",
+        "mime": "image/jpeg",
+        "name": "pexels-photo-6605187.jpeg",
+        "palette": [
+            "#515964",
+            "#7e8186",
+            "#beaca0",
+            "#e0b2a1",
+            "#e1d7d2"
+        ],
+        "size": 154616,
+        "tags": [],
+        "uploadDate": "2026-10-30T03:48:00-04:00",
+        "width": 2400,
+        "credit": {
+            "author": "Kampus Production",
+            "source": "Pexels",
+            "sourceUrl": "https://www.pexels.com/photo/man-looking-into-oven-6605187/",
+            "license": "Pexels License"
+        }
+    },
+    "updated": "2026-11-09T23:44:38-05:00",
+    "created": "2026-10-29T06:38:00-04:00"
+}

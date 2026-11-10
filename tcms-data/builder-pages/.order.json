@@ -1,0 +1,9 @@
+[
+    { "id": "home", "children": [] },
+    { "id": "menu", "children": [] },
+    { "id": "about", "children": [] },
+    { "id": "gallery", "children": [] },
+    { "id": "contact", "children": [] },
+    { "id": "readme", "children": [] },
+    { "id": "not-found", "children": [] }
+]

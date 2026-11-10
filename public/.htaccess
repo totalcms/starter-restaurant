@@ -1,0 +1,21 @@
+RewriteEngine On
+
+# Apache CGI/FastCGI strips the Authorization header before PHP sees it,
+# which silently turns Bearer-authenticated API/MCP requests anonymous.
+# Export it so PHP can restore it.
+RewriteCond %{HTTP:Authorization} .
+RewriteRule ^ - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+# Compute this directory's URL prefix dynamically (equivalent to RewriteBase,
+# but with no hardcoded path, so it also works after the subpath layout moves
+# this file to public/tcms/). Some hosts cannot reverse-map relative rewrite
+# substitutions in per-directory context (e.g. IONOS symlinked docroots), so
+# rewrites there silently 404 without an explicit base.
+RewriteCond %{REQUEST_URI}::$1 ^(.*?/)(.*)::\2$
+RewriteRule ^(.*)$ - [E=TCMS_BASE:%1]
+
+# Pass through real files and directories; route everything else through
+# Total CMS
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ %{ENV:TCMS_BASE}index.php [QSA,L]

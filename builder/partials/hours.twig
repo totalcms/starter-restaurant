@@ -1,0 +1,22 @@
+{#
+	Opening hours, from the Hours table in Restaurant Info: one line per day,
+	with a dotted leader to the times, like a menu. Today's line is marked
+	(aria-current) and printed bold in the brand color.
+	Used on the home and Contact pages, and in the footer (compact: true,
+	which shortens the day names).
+
+	Times are stored as 24-hour "17:00"; the date filter shows them as "5:00 pm".
+#}
+{% set compact = compact|default(false) %}
+{% set todayName = 'now'|date('l')|lower %}
+
+<dl class="leaders bill-hours" data-gap="md">
+	{% for row in info.hours %}
+		<div{% if row.day|lower == todayName %} aria-current="date"{% endif %}>
+			<dt>{{ compact ? row.day|slice(0, 3) : row.day }}</dt>
+			<dd>{{ row.closed ? 'Closed' : row.opens|date('g:i a') ~ ' – ' ~ row.closes|date('g:i a') }}</dd>
+		</div>
+	{% endfor %}
+</dl>
+
+{% if info.hoursNote %}<p><small>{{ info.hoursNote }}</small></p>{% endif %}

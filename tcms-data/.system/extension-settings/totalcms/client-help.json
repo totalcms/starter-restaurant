@@ -1,0 +1,4 @@
+{
+    "navLabel": "How-To",
+    "note": "<p><strong>Welcome to your Copper Thistle how-tos.</strong> Start with the guides below, or pick a topic from the list.</p>\n<p>Your menu has {{ cms.collection.objects('menu')|length }} dishes on it today.</p>\n<p>Stuck on something? Text me any time at (207) 555-0188. &mdash; Sam</p>"
+}

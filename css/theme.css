@@ -1,0 +1,605 @@
+/* =========================================================================
+   Site theme, imported after Yeti by style.css. Run `npm run build`
+   after changing it (or `npm run watch` while you work).
+
+   The look: a printed bill of fare. Every page is a white menu card laid on
+   a colored cover, printed in two inks: near-black, plus one "spot" ink in
+   the brand color. Yeti does the layout; this file sets its tokens and adds
+   a handful of menu-card pieces (masthead, leaders, the Today box).
+
+   Rebranding: most clients only need the first block. Change the brand hue
+   and the cover, ink and buttons all follow, in light and dark mode.
+
+   Full Yeti reference: node_modules/@foundation/yeti/dist/llms.txt
+   Set public tokens here, on :root or on an element. Leave --_yeti-* alone:
+   those are private and can change in any Yeti update.
+   ========================================================================= */
+
+/* ---- Font -----------------------------------------------------------
+   Archivo, self-hosted from assets/fonts (SIL Open Font License). It has a
+   width axis, so one file gives the tall condensed masthead, the wide
+   letterspaced section heads and the plain text in between.
+   To use another font, swap these files and the two --yeti-font-* lines. */
+@font-face {
+	font-family: "Archivo";
+	src: url("../fonts/archivo-latin.woff2") format("woff2");
+	font-weight: 100 900;
+	font-stretch: 62% 125%;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Archivo";
+	src: url("../fonts/archivo-latin-italic.woff2") format("woff2");
+	font-weight: 100 900;
+	font-stretch: 62% 125%;
+	font-style: italic;
+	font-display: swap;
+}
+
+:root {
+	/* ---- Color --------------------------------------------------------
+	   A hue is an angle on the color wheel (oklch):
+	   25 red, 50 orange, 80 amber, 145 green, 200 teal, 250 blue, 300 violet. */
+
+	/* Brand color: the menu cover and the spot ink. Deep evergreen. */
+	--yeti-hue-primary: 165;
+	/* Accent color: the logo, the divider rules and the Book a table buttons. Copper. */
+	--yeti-hue-secondary: 50;
+	/* The faint tint in the card stock and the black ink. */
+	--yeti-hue-neutral: 60;
+	/* How vivid the brand color is: 0 is grey, 0.12 is rich, above 0.2 may clip. */
+	--yeti-chroma: 0.12;
+
+	/* ---- Type --------------------------------------------------------- */
+	--yeti-font-sans: "Archivo", system-ui, sans-serif;
+	--yeti-font-heading: "Archivo", system-ui, sans-serif;
+	--yeti-weight-heading: 700;
+	--yeti-tracking-heading: 0;
+
+	/* ---- Shape --------------------------------------------------------
+	   Printed menus have square corners. Raise these for a softer card. */
+	--yeti-radius-md: 0;
+	--yeti-radius-lg: 0;
+
+	/* ---- Gallery ------------------------------------------------------
+	   The narrowest a gallery thumbnail may get. 15rem gives four across. */
+	--cms-gallery-min-size: 15rem;
+
+	/* ---- The menu card ------------------------------------------------
+	   Worked out from the colors above; you rarely need to touch these.
+	   light-dark(): the first value is for light mode, the second for dark. */
+	--bill-cover: light-dark(oklch(.34 calc(var(--yeti-chroma) * .7) var(--yeti-hue-primary)), oklch(.2 calc(var(--yeti-chroma) * .45) var(--yeti-hue-primary)));
+	--bill-on-cover: light-dark(oklch(.97 .015 var(--yeti-hue-primary)), oklch(.9 .02 var(--yeti-hue-primary)));
+	--bill-stock: light-dark(oklch(.995 .004 var(--yeti-hue-neutral)), oklch(.155 .01 var(--yeti-hue-neutral)));
+	--bill-ink: light-dark(oklch(.2 .015 var(--yeti-hue-neutral)), oklch(.93 .01 var(--yeti-hue-neutral)));
+	--bill-ink-muted: light-dark(oklch(.43 .015 var(--yeti-hue-neutral)), oklch(.74 .012 var(--yeti-hue-neutral)));
+	--bill-spot: light-dark(oklch(.44 var(--yeti-chroma) var(--yeti-hue-primary)), oklch(.8 var(--yeti-chroma) var(--yeti-hue-primary)));
+	--bill-copper: light-dark(oklch(.5 .125 var(--yeti-hue-secondary)), oklch(.74 .125 var(--yeti-hue-secondary)));
+	--bill-copper-strong: light-dark(oklch(.42 .115 var(--yeti-hue-secondary)), oklch(.82 .105 var(--yeti-hue-secondary)));
+	/* The cover is dark in both modes, so copper on it stays bright. */
+	--bill-copper-cover: oklch(.76 .115 var(--yeti-hue-secondary));
+	--bill-copper-cover-strong: oklch(.84 .09 var(--yeti-hue-secondary));
+	--bill-rule: color-mix(in oklch, var(--bill-ink) 22%, transparent);
+	/* Spot ink for printed lines, faint on purpose: the eye should go to the
+	   food and the words, not the frames around them. */
+	--bill-line: color-mix(in oklch, var(--bill-spot) 30%, transparent);
+	/* Space between the card's edge and its printed frame. */
+	--bill-frame-inset: clamp(.4rem, 1.2vw, .9rem);
+	/* The cover showing around the card and below the footer. */
+	--bill-margin: clamp(.375rem, 2vw, 2rem);
+
+	/* Point Yeti's own colors at the card, so its components print in the same inks. */
+	--yeti-color-surface: var(--bill-stock);
+	--yeti-color-text: var(--bill-ink);
+	--yeti-color-text-muted: var(--bill-ink-muted);
+	--yeti-color-primary: var(--bill-copper);
+	--yeti-color-primary-strong: var(--bill-copper-strong);
+	--yeti-color-primary-text: var(--bill-spot);
+	--yeti-link-color: var(--bill-copper);
+	--yeti-link-color-hover: var(--bill-copper-strong);
+	--yeti-on-primary: var(--bill-stock);
+	--yeti-color-focus: var(--bill-spot);
+	--yeti-color-border: var(--bill-rule);
+	--yeti-table-border: var(--bill-rule);
+	--yeti-card-surface: var(--bill-stock);
+	--yeti-card-border: var(--bill-rule);
+	--yeti-divider-line: 1px solid var(--bill-copper);
+	--yeti-nav-surface: var(--bill-cover);
+	--yeti-nav-panel: var(--bill-cover);
+	--yeti-nav-border: transparent;
+	--yeti-nav-link: var(--bill-on-cover);
+	--yeti-nav-panel-text: var(--bill-on-cover);
+	--yeti-nav-brand-size: var(--yeti-text-lg);
+	--yeti-nav-brand-weight: 800;
+	/* Buttons are cut like a leaf: two opposite corners swept, two nearly square. */
+	--yeti-button-radius: .6em .12em / .42em .12em;
+	/* The same cut, mirrored. See .bill-flip. */
+	--bill-button-radius-flip: .12em .6em / .12em .42em;
+	--yeti-badge-radius: 0;
+}
+
+/* ---- Element rules ---------------------------------------------------
+   Plain HTML elements only, inside Yeti's theme layer. */
+@layer yeti.theme {
+	html {
+		background-color: var(--bill-cover);
+		scrollbar-color: color-mix(in oklch, var(--bill-on-cover) 45%, transparent) var(--bill-cover);
+	}
+
+	body {
+		background-color: var(--bill-cover);
+		color: var(--bill-ink);
+		caret-color: var(--bill-spot);
+		font-variant-numeric: tabular-nums;
+	}
+
+	::selection {
+		background-color: var(--bill-spot);
+		color: var(--bill-stock);
+	}
+
+	a {
+		text-underline-offset: .2em;
+		text-decoration-thickness: 1px;
+	}
+
+	/* Photos are printed plates: square, with a hairline edge. */
+	img {
+		border-radius: 0;
+	}
+
+	/* Headings are set like a menu: capitals, no serif. */
+	h1, h2, h3 {
+		text-transform: uppercase;
+	}
+
+	h2 {
+		font-size: var(--yeti-text-md);
+		font-stretch: 118%;
+		letter-spacing: .2em;
+		font-weight: 700;
+	}
+
+	h3 {
+		font-size: var(--yeti-text-md);
+		letter-spacing: .06em;
+		font-weight: 650;
+	}
+
+	address {
+		font-style: normal;
+	}
+}
+
+/* ---- The menu card ----------------------------------------------------
+   Class names start with "bill-" so you can tell them apart from Yeti's. */
+@layer yeti.components {
+	/* ---- Top bar, on the cover ---- */
+	.shell > .nav {
+		padding-inline: clamp(1rem, 3vw, 2.5rem);
+		color: var(--bill-on-cover);
+	}
+
+	.nav > [data-brand] {
+		font-stretch: 70%;
+		text-transform: uppercase;
+		letter-spacing: .02em;
+	}
+
+	.nav > ul[popover] a {
+		text-transform: uppercase;
+		letter-spacing: .12em;
+		font-size: var(--yeti-text-sm);
+		font-weight: 600;
+		text-decoration: none;
+	}
+
+	/* The same selector as Yeti's, so this one wins by coming later. */
+	.nav > ul[popover] :is(a, .dropdown > button):hover {
+		background-color: color-mix(in oklch, var(--bill-on-cover) 12%, transparent);
+	}
+
+	/* The page you're on gets a printed underline, not a color change. */
+	.nav > ul[popover] a[aria-current] {
+		color: var(--bill-on-cover);
+		text-decoration: underline;
+		text-decoration-thickness: 2px;
+		text-underline-offset: .45em;
+	}
+
+	.nav > button[popovertarget],
+	.nav > ul[popover] > [data-close] > button {
+		color: var(--bill-on-cover);
+	}
+
+	/* "Book a table" in the top bar: bright copper, so it stands out on the cover. */
+	.nav .button {
+		--yeti-color-primary: var(--bill-copper-cover);
+		--yeti-color-primary-strong: var(--bill-copper-cover-strong);
+		--yeti-on-primary: var(--bill-cover);
+	}
+
+	/* The logo. Yeti sizes and places it beside the name in the top bar. */
+	.bill-logo {
+		color: var(--bill-copper-cover);
+	}
+
+	/* Optical centering. The head of the thistle sits below the middle of the
+	   drawing, so lift it until the head lines up with the name and the links.
+	   A different logo may not need this. */
+	.nav .bill-logo {
+		translate: 0 -10%;
+	}
+
+	/* The name and the button each stay on one line. */
+	.nav [data-brand],
+	.nav .button {
+		white-space: nowrap;
+	}
+
+	/* No room for both on the narrowest phones: show the logo alone. The name
+	   stays in the page for screen readers. */
+	@media (max-width: 24rem) {
+		.nav [data-brand] > span {
+			position: absolute;
+			inline-size: 1px;
+			block-size: 1px;
+			overflow: hidden;
+			clip-path: inset(50%);
+		}
+	}
+
+	/* ---- The card ---- */
+	.bill {
+		position: relative;
+		/* The cover shows beside the card, and it stops growing at 84rem. */
+		margin-inline: max(var(--bill-margin), (100% - 84rem) / 2);
+		padding-block: clamp(2.5rem, 6vw, 5rem);
+		/* Keeps the content clear of the printed frame on a phone. */
+		padding-inline: calc(var(--bill-frame-inset) + clamp(.75rem, 3vw, 2rem));
+		background-color: var(--bill-stock);
+		color: var(--bill-ink);
+		/* The printed frame: a double rule just inside the card's edge. */
+		outline: 3px double var(--bill-line);
+		outline-offset: calc(-1 * var(--bill-frame-inset) - 3px);
+	}
+
+	/* The card's arrival is Yeti's .enter (see layouts/default.twig), slowed down. */
+	.bill {
+		--yeti-enter-duration: .9s;
+		--yeti-enter-distance: .75rem;
+		--yeti-enter-ease: cubic-bezier(.16, 1, .3, 1);
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		.bill-dateline::before,
+		.bill-dateline::after {
+			animation: bill-rule-in 1.1s .15s cubic-bezier(.16, 1, .3, 1) both;
+		}
+	}
+
+	@keyframes bill-rule-in {
+		from { scale: 0 1; }
+	}
+
+	/* ---- Masthead: the name, big, in the spot ink ---- */
+	.bill-masthead {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr);
+		justify-items: center;
+		gap: var(--yeti-space-md);
+		text-align: center;
+		container-type: inline-size;
+	}
+
+	.bill-masthead h1 {
+		margin: 0;
+		color: var(--bill-spot);
+		font-stretch: 62%;
+		font-weight: 850;
+		line-height: .86;
+		letter-spacing: -.01em;
+		word-spacing: .12em;
+		text-wrap: balance;
+	}
+
+	/*
+		The restaurant's name on the home page is a Yeti billboard: its size follows
+		the width of the card. A billboard never measures its text, so index.twig
+		passes in the number of letters and this works out the proportion: fewer
+		letters print bigger, down to a floor of 6 so that a short one-word name
+		still fits a phone. If a name is ever too wide, it wraps to two lines.
+	*/
+	.bill-masthead h1.billboard {
+		--yeti-text-display: 13rem;
+		--yeti-tracking-heading: -.01em;
+		--yeti-fit-width: calc(var(--yeti-text-display) * max(var(--bill-name-length), 6) / 2.2);
+	}
+
+	/* Inner pages: the same masthead, a size down. */
+	.bill-masthead[data-size="page"] h1 {
+		font-size: clamp(2.75rem, 9cqi, 6rem);
+	}
+
+	.bill-masthead .lede {
+		--yeti-lede-size: var(--yeti-text-md);
+		--yeti-lede-measure: 44ch;
+		--yeti-leading-md: 1.5;
+		margin: 0;
+		font-stretch: 110%;
+		font-weight: 500;
+		letter-spacing: .08em;
+		text-transform: uppercase;
+	}
+
+	/* The date line at the top of the card, between two spot rules. */
+	.bill-dateline {
+		inline-size: 100%;
+		margin: 0;
+		font-size: var(--yeti-text-sm);
+		font-stretch: 112%;
+		font-weight: 600;
+		letter-spacing: .16em;
+		text-transform: uppercase;
+	}
+
+	.bill-dateline::before,
+	.bill-dateline::after {
+		transform-origin: center;
+	}
+
+	.bill-dateline > span {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		column-gap: .6em;
+	}
+
+	.bill-dateline > span > * {
+		white-space: nowrap;
+		text-align: center;
+	}
+
+	/* On a wide card the line never wraps; on a narrow one the two pieces
+	   stack, so the dot between them goes. */
+	@container (min-width: 34rem) {
+		.bill-dateline > span {
+			flex: none;
+		}
+	}
+
+	@container (max-width: 34rem) {
+		.bill-dateline {
+			gap: var(--yeti-space-sm);
+			letter-spacing: .1em;
+		}
+
+		.bill-dateline-dot {
+			display: none;
+		}
+
+		/* On the smallest phones the hours may wrap too. */
+		.bill-dateline > span > * {
+			white-space: normal;
+		}
+	}
+
+	/* Section heads: wide capitals centered between rules, like a menu. */
+	/* Narrow tracking on a phone, so a two-word head stays on one line between its rules. */
+	@media (max-width: 30rem) {
+		.bill-head {
+			gap: var(--yeti-space-sm);
+			font-stretch: 100%;
+			letter-spacing: .1em;
+		}
+	}
+
+	/* Dietary notes under a dish: small capitals, not badges. */
+	.bill-notes {
+		margin: 0;
+		color: var(--bill-ink-muted);
+		font-size: calc(var(--yeti-text-sm) * .9);
+		font-weight: 600;
+		letter-spacing: .12em;
+		text-transform: uppercase;
+	}
+
+	/* ---- Photos: a printed plate with a white margin and a hairline ---- */
+	.bill-plate {
+		margin: 0;
+		padding: clamp(.3rem, .8vw, .55rem);
+		border: 1px solid var(--bill-rule);
+		background-color: var(--bill-stock);
+	}
+
+	.bill-plate > :is(img, svg) {
+		display: block;
+		inline-size: 100%;
+		block-size: auto;
+	}
+
+	/* The empty-photo placeholder: a tinted panel in the spot ink. */
+	.bill-plate > svg {
+		color: color-mix(in oklch, var(--bill-spot) 14%, var(--bill-stock));
+	}
+
+	/* ---- From the kitchen: a small plate beside each line on a phone,
+	        up to four plates across on a wider screen ---- */
+	.bill-featured {
+		display: grid;
+		gap: var(--yeti-space-lg);
+	}
+
+	.bill-featured > article {
+		display: grid;
+		grid-template-columns: clamp(4rem, 22%, 5.5rem) minmax(0, 1fr);
+		align-items: center;
+		gap: var(--yeti-space-md);
+	}
+
+	.bill-featured > article:not(:has(> figure)) {
+		grid-template-columns: 1fr;
+	}
+
+	.bill-featured .bill-plate {
+		padding: .25rem;
+	}
+
+	.bill-featured h3 {
+		font-size: calc(var(--yeti-text-md) * .9);
+		letter-spacing: .04em;
+	}
+
+	@media (min-width: 48rem) {
+		.bill-featured {
+			grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+			gap: var(--yeti-space-xl);
+		}
+
+		.bill-featured > article {
+			grid-template-columns: 1fr;
+			align-items: start;
+			gap: var(--yeti-space-sm);
+		}
+
+		.bill-featured .bill-plate {
+			padding: clamp(.3rem, .8vw, .55rem);
+		}
+	}
+
+	/* ---- The Today box: specials, boxed in the spot ink ---- */
+	.bill-today {
+		--bill-today-tint: color-mix(in oklch, var(--bill-spot) 6%, var(--bill-stock));
+		position: relative;
+		padding: clamp(1.25rem, 3vw, 2.25rem);
+		padding-block-start: calc(clamp(1.25rem, 3vw, 2.25rem) + 1.25rem);
+		background: var(--bill-today-tint);
+		border-radius: 8px;
+		outline: 1px solid var(--bill-line);
+		outline-offset: -6px;
+	}
+
+	/* White mats around the photos, against the tint. */
+	.bill-today .bill-plate {
+		background: var(--bill-stock);
+	}
+
+	/* The thistle set into the box's top edge. The background is split to match
+	   the card above the edge and the tint below it, which leaves a clean gap. */
+	.bill-seal {
+		position: absolute;
+		inset-block-start: 0;
+		inset-inline-start: 50%;
+		translate: -50% -50%;
+		display: grid;
+		padding-inline: .75rem;
+		background-color: var(--bill-today-tint);
+		background-image: linear-gradient(var(--bill-stock) 50%, transparent 50%);
+	}
+
+	.bill-seal .bill-logo {
+		block-size: 3.5rem;
+		inline-size: auto;
+		color: var(--bill-copper);
+	}
+
+	/* ---- Hours: one line per day with a leader; today in bold copper ---- */
+	.bill-hours dd {
+		font-weight: 400;
+		text-align: end;
+		white-space: nowrap;
+	}
+
+	/* Below this a full day name and its time can't share a line. On a wider
+	   screen the times stay whole, because the list sizes to them. */
+	@media (max-width: 22.4rem) {
+		.bill-hours dd {
+			white-space: normal;
+		}
+	}
+
+	.bill-hours [aria-current] {
+		color: var(--bill-copper);
+		font-weight: 700;
+	}
+
+	.bill-hours [aria-current] dd {
+		font-weight: 700;
+	}
+
+	.bill-hours [aria-current] {
+		--yeti-leaders-line: 2px dotted var(--bill-copper);
+	}
+
+	/* ---- The menu page: sections flow into two columns on a wide screen ---- */
+	.bill-columns {
+		display: grid;
+		gap: var(--yeti-space-3xl);
+	}
+
+	@media (min-width: 64rem) {
+		.bill-columns {
+			display: block;
+			columns: 2;
+			column-gap: var(--yeti-space-3xl);
+		}
+
+		.bill-columns > section {
+			break-inside: avoid;
+			margin-block-end: var(--yeti-space-3xl);
+		}
+	}
+
+	/* ---- Buttons: square, capitals ---- */
+	.button {
+		text-transform: uppercase;
+		letter-spacing: .1em;
+		font-weight: 700;
+		font-size: var(--yeti-text-sm);
+		padding-block: .9em;
+		padding-inline: 1.6em;
+	}
+
+	.button[data-emphasis="medium"] {
+		--yeti-color-primary: var(--bill-ink);
+		--yeti-color-primary-text: var(--bill-ink);
+		--yeti-color-primary-subtle: color-mix(in oklch, var(--bill-ink) 7%, transparent);
+	}
+
+	/* On every outlined button, so a pair beside a solid button mirrors it.
+	   Remove the class from a button to give it the normal cut. */
+	.button.bill-flip {
+		border-radius: var(--bill-button-radius-flip);
+	}
+
+	.button[data-size="sm"] {
+		padding-block: .6em;
+		padding-inline: 1.2em;
+		font-size: .72rem;
+	}
+
+	/* ---- The back cover: the footer ---- */
+	/* The cover is dark in both modes, so the footer always uses the dark inks. */
+	.shell > footer {
+		margin-inline: var(--bill-margin);
+		margin-block-end: var(--bill-margin);
+		color-scheme: dark;
+		color: var(--bill-on-cover);
+		background-color: transparent;
+	}
+
+	.shell > footer a {
+		color: inherit;
+	}
+
+	.shell > footer h2 {
+		font-size: var(--yeti-text-sm);
+	}
+}
+
+/* Outside any layer, because .lede is a Yeti utility and has no token for this.
+   A centered tagline reads better with its lines evened out. */
+.bill-masthead .lede {
+	text-wrap: balance;
+}

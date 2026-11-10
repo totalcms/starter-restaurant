@@ -1,0 +1,54 @@
+{
+    "id": "holiday-hours-and-closures",
+    "summary": "Closed for a holiday? Tell me and I'll update every page.",
+    "content": "Your hours appear on the home page, the Contact page, the footer and the information search engines read. I keep them in one place, so one change updates them all.\n\n## What to send me\n\nText me at (207) 555-0188 with:\n\n- The dates that are changing\n- Your hours on those days, or that you're closed\n- Any short note for guests, such as \"Closed for a private event\"\n\n## When to send it\n\nPlease send it **a week ahead** when you can. Anything sent before 3 p.m. on a weekday goes live that day.\n\nClosing suddenly because of a storm or a power cut? Text me any time and I'll put a note on the site as soon as I can.\n\n## Don't forget\n\nYour hours also appear on Google and on OpenTable. I can't change those for you, so update them yourself. See [Accounts and renewals](ext/totalcms/client-help/post/accounts-and-renewals) for where they live.",
+    "extra": "",
+    "draft": false,
+    "featured": true,
+    "title": "Holiday hours and closures",
+    "date": "2026-11-02T00:00:00+00:00",
+    "author": "Sam Keller",
+    "media": "",
+    "categories": [
+        "Your Website"
+    ],
+    "tags": [
+        "hours"
+    ],
+    "image": {
+        "alt": "A table set with linen napkins",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "d2dd72fa",
+        "height": 1600,
+        "link": "",
+        "mime": "image/jpeg",
+        "name": "14-table.jpg",
+        "palette": [
+            "#a4a5ab",
+            "#745934",
+            "#1b160d",
+            "#9a7a58",
+            "#625d58"
+        ],
+        "size": 258965,
+        "tags": [],
+        "uploadDate": "2026-11-05T18:45:16+00:00",
+        "width": 2400,
+        "credit": {
+            "author": "Maria Tyutina",
+            "source": "Pexels",
+            "sourceUrl": "https://www.pexels.com/photo/close-up-of-a-dinner-table-setting-7651664/",
+            "license": "Pexels License"
+        }
+    },
+    "gallery": [],
+    "updated": "2026-11-09T23:44:37-05:00",
+    "created": "2026-11-05T18:45:16+00:00"
+}

@@ -1,0 +1,6 @@
+/* The stylesheet the site loads: Yeti from npm, then this site's theme.
+   Built into public/assets/ by `npm run build`. Edit theme.css, not this file.
+   Theme comes after Yeti: its rules join Yeti's layers and rely on loading later. */
+
+@import "@foundation/yeti";
+@import "./theme.css";

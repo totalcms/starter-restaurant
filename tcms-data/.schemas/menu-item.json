@@ -1,0 +1,123 @@
+{
+    "$schema": "https:\/\/json-schema.org\/draft\/2020-12\/schema",
+    "$id": "https:\/\/www.totalcms.co\/schemas\/custom\/menu-item.json",
+    "type": "object",
+    "id": "menu-item",
+    "description": "One dish or drink on the restaurant's menu. The menu page groups items by section and sorts them by order.",
+    "properties": {
+        "id": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/slug.json",
+            "label": "ID",
+            "help": "Generated from the name. No need to change it.",
+            "field": "id",
+            "settings": {
+                "autogen": "${name}"
+            }
+        },
+        "name": {
+            "type": "string",
+            "label": "Name",
+            "help": "The dish as it appears on the menu, e.g. Wood-fired Margherita.",
+            "field": "text"
+        },
+        "section": {
+            "type": "string",
+            "label": "Menu Section",
+            "help": "Which part of the menu the item belongs to. The menu page shows sections in this order.",
+            "field": "select",
+            "options": [
+                "Starters",
+                "Mains",
+                "Sides",
+                "Desserts",
+                "Drinks"
+            ],
+            "default": "Mains"
+        },
+        "price": {
+            "type": "number",
+            "label": "Price",
+            "help": "Price in the restaurant's currency, without the symbol.",
+            "field": "price"
+        },
+        "description": {
+            "type": "string",
+            "label": "Description",
+            "help": "One or two plain sentences: the main ingredients and what makes it good. No formatting.",
+            "field": "textarea"
+        },
+        "dietary": {
+            "type": "array",
+            "label": "Dietary",
+            "help": "Tick everything that applies. Each one shows as a small badge next to the dish.",
+            "field": "checklist",
+            "options": [
+                "Vegetarian",
+                "Vegan",
+                "Gluten-free",
+                "Spicy"
+            ]
+        },
+        "image": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/image.json",
+            "label": "Photo",
+            "help": "Optional photo of the dish. Featured items show it on the home page; landscape works best.",
+            "field": "image"
+        },
+        "featured": {
+            "type": "boolean",
+            "label": "Featured",
+            "help": "Turn on to show this dish on the home page. Three or four featured items look best.",
+            "field": "toggle",
+            "default": false
+        },
+        "order": {
+            "type": "number",
+            "label": "Order",
+            "help": "Position within its section. Lower numbers come first.",
+            "field": "number",
+            "default": 0
+        },
+        "updated": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/date.json",
+            "label": "Updated",
+            "help": "Set automatically when the item is saved.",
+            "field": "datetime",
+            "settings": {
+                "onUpdate": true,
+                "readonly": true
+            }
+        },
+        "created": {
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/date.json",
+            "label": "Created",
+            "help": "Set automatically when the item is created.",
+            "field": "datetime",
+            "settings": {
+                "onCreate": true,
+                "readonly": true
+            }
+        }
+    },
+    "required": [
+        "id",
+        "name",
+        "section",
+        "price"
+    ],
+    "index": [
+        "id",
+        "name",
+        "section",
+        "price",
+        "dietary",
+        "featured",
+        "order",
+        "image",
+        "updated",
+        "created"
+    ],
+    "formgrid": "name id\nsection price\ndescription description\ndietary dietary\nimage image\nfeatured order\nupdated created",
+    "updated": "2026-10-29T06:37:42+00:00",
+    "category": "Restaurant"
+}

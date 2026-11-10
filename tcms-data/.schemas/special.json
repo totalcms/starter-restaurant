@@ -1,0 +1,129 @@
+{
+    "$schema": "https:\/\/json-schema.org\/draft\/2020-12\/schema",
+    "$id": "https:\/\/www.totalcms.co\/schemas\/custom\/special.json",
+    "type": "object",
+    "id": "special",
+    "description": "A dish offered for a limited time. It shows on the site from its start date through its end date, then hides itself.",
+    "properties": {
+        "id": {
+            "field": "id",
+            "label": "ID",
+            "help": "Generated from the title. No need to change it.",
+            "settings": {
+                "autogen": "${title}"
+            },
+            "mcp": {
+                "description": "",
+                "expose": true
+            },
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/slug.json"
+        },
+        "title": {
+            "field": "text",
+            "label": "Title",
+            "help": "Name of the special, e.g. Soft-shell Crab Sandwich.",
+            "type": "string",
+            "mcp": {
+                "description": "",
+                "expose": true
+            }
+        },
+        "startDate": {
+            "field": "date",
+            "label": "Starts",
+            "help": "First day the special is offered. It appears on the site from this day.",
+            "mcp": {
+                "description": "",
+                "expose": true
+            },
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/date.json"
+        },
+        "endDate": {
+            "field": "date",
+            "label": "Ends",
+            "help": "Last day the special is offered. Use the same date as Starts for a one-day special.",
+            "mcp": {
+                "description": "",
+                "expose": true
+            },
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/date.json"
+        },
+        "price": {
+            "field": "price",
+            "label": "Price",
+            "help": "Price in the restaurant's currency, without the symbol.",
+            "type": "number",
+            "mcp": {
+                "description": "",
+                "expose": true
+            }
+        },
+        "description": {
+            "field": "textarea",
+            "label": "Description",
+            "help": "One or two plain sentences that make a guest want to order it.",
+            "type": "string",
+            "mcp": {
+                "description": "",
+                "expose": true
+            }
+        },
+        "image": {
+            "field": "image",
+            "label": "Photo",
+            "help": "Optional photo of the special. Landscape works best.",
+            "mcp": {
+                "description": "",
+                "expose": true
+            },
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/image.json"
+        },
+        "updated": {
+            "field": "datetime",
+            "label": "Updated",
+            "help": "Set automatically when the special is saved.",
+            "settings": {
+                "onUpdate": true,
+                "readonly": true
+            },
+            "mcp": {
+                "description": "",
+                "expose": true
+            },
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/date.json"
+        },
+        "created": {
+            "field": "datetime",
+            "label": "Created",
+            "help": "Set automatically when the special is created.",
+            "settings": {
+                "onCreate": true,
+                "readonly": true
+            },
+            "mcp": {
+                "description": "",
+                "expose": true
+            },
+            "$ref": "https:\/\/www.totalcms.co\/schemas\/properties\/date.json"
+        }
+    },
+    "required": [
+        "id",
+        "title",
+        "startDate",
+        "endDate"
+    ],
+    "index": [
+        "id",
+        "title",
+        "startDate",
+        "endDate",
+        "price",
+        "image",
+        "updated",
+        "created"
+    ],
+    "formgrid": "featured .\ntitle id\nstartDate endDate\nprice price\ndescription description\nimage image\nupdated created",
+    "updated": "2026-11-05T20:52:19-05:00",
+    "category": "Restaurant"
+}

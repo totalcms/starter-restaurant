@@ -1,0 +1,48 @@
+{
+    "id": "charred-shishito-peppers",
+    "name": "Charred Shishito Peppers",
+    "section": "Starters",
+    "price": 10,
+    "description": "Blistered in the wood oven with toasted crumbs, flaky salt and a knob of cultured butter.",
+    "dietary": [
+        "Vegetarian",
+        "Gluten-free"
+    ],
+    "image": {
+        "alt": "Blistered shishito peppers with toasted crumbs and butter",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "81063b53",
+        "height": 3000,
+        "link": "",
+        "mime": "image/jpeg",
+        "name": "pexels-photo-30682985.jpeg",
+        "palette": [
+            "#d0baa0",
+            "#869696",
+            "#1f1e1a",
+            "#a1b1b5",
+            "#5d4d2c"
+        ],
+        "size": 860019,
+        "tags": [],
+        "uploadDate": "2026-10-30T03:48:32+00:00",
+        "width": 2400,
+        "credit": {
+            "author": "Airam Dato-on",
+            "source": "Pexels",
+            "sourceUrl": "https://www.pexels.com/photo/delicious-grilled-shishito-peppers-on-a-rustic-table-30682985/",
+            "license": "Pexels License"
+        }
+    },
+    "featured": false,
+    "order": 1,
+    "updated": "2026-11-09T23:44:38-05:00",
+    "created": "2026-10-29T06:38:44+00:00"
+}

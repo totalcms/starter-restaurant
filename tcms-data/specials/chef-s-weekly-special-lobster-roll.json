@@ -1,0 +1,43 @@
+{
+    "id": "chef-s-weekly-special-lobster-roll",
+    "title": "Chef's Weekly Special: Lobster Roll",
+    "startDate": "2026-01-01T00:00:00-05:00",
+    "endDate": "2036-12-31T00:00:00-05:00",
+    "price": 32,
+    "description": "Warm butter-poached lobster in a toasted brioche bun with chive mayo, red cabbage slaw and lemon. Ask your server what's new this week.",
+    "image": {
+        "alt": "A lobster roll with red cabbage slaw and lemon",
+        "exif": {
+            "author": "DEANE BAYAS"
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "8eef068f",
+        "height": 1600,
+        "link": "",
+        "mime": "image/jpeg",
+        "name": "pexels-photo-30776096.jpeg",
+        "palette": [
+            "#895a2c",
+            "#272f23",
+            "#c08a4a",
+            "#888d8e",
+            "#e5e8e7"
+        ],
+        "size": 398176,
+        "tags": [],
+        "uploadDate": "2026-10-30T03:48:00-04:00",
+        "width": 2400,
+        "credit": {
+            "author": "Deane Bayas",
+            "source": "Pexels",
+            "sourceUrl": "https://www.pexels.com/photo/delicious-lobster-roll-with-coleslaw-in-vancouver-30776096/",
+            "license": "Pexels License"
+        }
+    },
+    "updated": "2026-11-09T23:44:40-05:00",
+    "created": "2026-10-29T06:38:00-04:00"
+}

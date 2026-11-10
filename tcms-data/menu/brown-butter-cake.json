@@ -1,0 +1,47 @@
+{
+    "id": "brown-butter-cake",
+    "name": "Brown Butter Cake",
+    "section": "Desserts",
+    "price": 12,
+    "description": "Brown butter cake studded with Maine blueberries, served warm with cr\u00e8me fra\u00eeche.",
+    "dietary": [
+        "Vegetarian"
+    ],
+    "image": {
+        "alt": "A slice of blueberry butter cake",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "624ebe8b",
+        "height": 2400,
+        "link": "",
+        "mime": "image/jpeg",
+        "name": "pexels-photo-31430609.jpeg",
+        "palette": [
+            "#a9a299",
+            "#332b20",
+            "#907133",
+            "#623934",
+            "#6c6c57"
+        ],
+        "size": 481176,
+        "tags": [],
+        "uploadDate": "2026-10-30T03:48:30+00:00",
+        "width": 2400,
+        "credit": {
+            "author": "Jared Kaeb",
+            "source": "Pexels",
+            "sourceUrl": "https://www.pexels.com/photo/delicious-homemade-blueberry-loaf-cake-slice-31430609/",
+            "license": "Pexels License"
+        }
+    },
+    "featured": true,
+    "order": 1,
+    "updated": "2026-11-09T23:44:26-05:00",
+    "created": "2026-10-29T06:38:44+00:00"
+}

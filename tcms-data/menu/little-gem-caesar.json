@@ -1,0 +1,33 @@
+{
+    "id": "little-gem-caesar",
+    "name": "Little Gem Caesar",
+    "section": "Starters",
+    "price": 15,
+    "description": "Crisp lettuces, anchovy dressing, parmesan and garlic crumbs.",
+    "dietary": [],
+    "image": {
+        "alt": "",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "0b9e9d46",
+        "height": 0,
+        "link": "",
+        "mime": "",
+        "name": "",
+        "palette": [],
+        "size": 0,
+        "tags": [],
+        "uploadDate": "2026-10-29T06:38:44+00:00",
+        "width": 0
+    },
+    "featured": false,
+    "order": 4,
+    "updated": "2026-11-05T21:44:25-05:00",
+    "created": "2026-10-29T06:38:44+00:00"
+}

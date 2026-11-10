@@ -1,0 +1,54 @@
+{
+    "id": "add-a-weekly-special",
+    "summary": "Add a special that appears and disappears on its own.",
+    "content": "1. In the sidebar on the far left, select the **Collections** icon, then **Specials**.\n2. At the top right, select **+ New Object**.\n3. In the first box, enter the name of the special, such as \"Soft-shell Crab Sandwich\".\n4. Set **Starts** to the first day you'll offer it.\n5. Set **Ends** to the last day you'll offer it. For a one-day special, use the same date as **Starts**.\n6. Enter the **Price**, using numbers only.\n7. Write one or two sentences in **Description**.\n8. Add a **Photo** if you have one.\n9. Scroll to the bottom and select **Save**.\n\n## Why isn't my special showing?\n\nThe dates have to include today, or the special won't show. A special dated for next week stays hidden until its **Starts** date, and it disappears by itself after its **Ends** date.\n\nThat means you can set up next week's special today and leave it alone.\n\nIf you need to pull one early, read [End a special early](ext/totalcms/client-help/post/end-a-special-early).",
+    "extra": "",
+    "draft": false,
+    "featured": true,
+    "title": "Add a weekly special",
+    "date": "2026-11-02T00:00:00+00:00",
+    "author": "Sam Keller",
+    "media": "",
+    "categories": [
+        "Specials"
+    ],
+    "tags": [
+        "specials"
+    ],
+    "image": {
+        "alt": "A lobster roll with red cabbage slaw and lemon",
+        "exif": {
+            "author": "DEANE BAYAS"
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "c2243ac3",
+        "height": 1600,
+        "link": "",
+        "mime": "image/jpeg",
+        "name": "11-lobster-roll.jpg",
+        "palette": [
+            "#895a2c",
+            "#272f23",
+            "#c08a4a",
+            "#888d8e",
+            "#e5e8e7"
+        ],
+        "size": 398176,
+        "tags": [],
+        "uploadDate": "2026-11-05T18:45:15+00:00",
+        "width": 2400,
+        "credit": {
+            "author": "Deane Bayas",
+            "source": "Pexels",
+            "sourceUrl": "https://www.pexels.com/photo/delicious-lobster-roll-with-coleslaw-in-vancouver-30776096/",
+            "license": "Pexels License"
+        }
+    },
+    "gallery": [],
+    "updated": "2026-11-09T23:44:36-05:00",
+    "created": "2026-11-05T18:45:15+00:00"
+}

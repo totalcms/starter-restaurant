@@ -1,0 +1,37 @@
+{
+    "id": "charred-broccolini",
+    "name": "Charred Broccolini",
+    "section": "Sides",
+    "price": 11,
+    "description": "Chili, lemon and toasted almonds.",
+    "dietary": [
+        "Vegan",
+        "Gluten-free",
+        "Spicy"
+    ],
+    "image": {
+        "alt": "",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "0b9e9d46",
+        "height": 0,
+        "link": "",
+        "mime": "",
+        "name": "",
+        "palette": [],
+        "size": 0,
+        "tags": [],
+        "uploadDate": "2026-10-29T06:38:44+00:00",
+        "width": 0
+    },
+    "featured": false,
+    "order": 2,
+    "updated": "2026-11-05T21:44:25-05:00",
+    "created": "2026-10-29T06:38:44+00:00"
+}

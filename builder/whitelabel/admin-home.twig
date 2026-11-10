@@ -1,0 +1,189 @@
+{#
+	The dashboard home. Admins get the standard home. Everyone else gets a page
+	about the restaurant: today's hours and specials, the jobs they can do, and
+	where to get help. Each link checks the signed-in user's access group, so
+	this works for any group. Replacing the admin home needs the Pro edition.
+#}
+{% if cms.auth.isAdmin() %}
+	{{ include('admin-home-default.twig') }}
+{% else %}
+	{% set firstName = cms.auth.userData.name|default('')|split(' ')|first %}
+
+	{% set info = cms.collection.object('info', 'info') %}
+	{% set today = info.hours|default([])|filter(row => row.day|lower == 'now'|date('l')|lower)|first %}
+
+	{% set canMenu = cms.auth.canAccessCollection('menu', 'update') %}
+	{% set canSpecials = cms.auth.canAccessCollection('specials', 'update') %}
+
+	{% set dishes = cms.collection.objects('menu') %}
+	{% set noPhoto = dishes|filter(dish => not dish.image.name|default(''))|sortCollection([{property: 'name'}]) %}
+
+	{# The same dates that decide what the website shows. #}
+	{% set specials = cms.collection.objects('specials')|filterCollection([
+		{property: 'startDate', operator: 'pastToday'},
+		{property: 'endDate', operator: 'futureToday'}
+	]) %}
+	{% set nextWeek = 'now'|date_modify('+7 days')|date('U') %}
+	{% set endingSoon = specials|filter(special => special.endDate|date('U') <= nextWeek) %}
+
+	<div class="client-home">
+	<div class="dashboard-welcome">
+		<h1>Hello{% if firstName %}, {{ firstName }}{% endif %}.</h1>
+		<p class="dashboard-subtitle">Here's what guests see on the {{ info.name }} website today.</p>
+	</div>
+
+	<div class="dashboard-stats client-home-today">
+		<div class="stat-card">
+			<div class="stat-content">
+				<div class="stat-label">{{ 'now'|date('l') }}</div>
+				<div class="stat-value">
+					{% if not today or today.closed %}
+						Closed
+					{% else %}
+						{{ today.opens|date('g:i') }}&ndash;{{ today.closes|date('g:i a') }}
+					{% endif %}
+				</div>
+			</div>
+		</div>
+		<div class="stat-card">
+			<div class="stat-content">
+				<div class="stat-label">Specials running</div>
+				<div class="stat-value">{{ specials|length }}</div>
+			</div>
+		</div>
+		<div class="stat-card">
+			<div class="stat-content">
+				<div class="stat-label">Dishes on the menu</div>
+				<div class="stat-value">{{ dishes|length }}</div>
+			</div>
+		</div>
+	</div>
+
+	{# Only the jobs this person's access group allows. #}
+	{% set jobs = [] %}
+	{% if canMenu %}
+		{% set jobs = jobs|merge([{label: 'Change a price', url: 'collections/menu', icon: 'dollar'}]) %}
+	{% endif %}
+	{% if cms.auth.canAccessCollection('specials', 'create') %}
+		{% set jobs = jobs|merge([{label: 'Add a special', url: 'collections/specials/add', icon: 'add'}]) %}
+	{% endif %}
+	{% if cms.auth.canAccessCollection('menu', 'create') %}
+		{% set jobs = jobs|merge([{label: 'Add a dish', url: 'collections/menu/add', icon: 'add'}]) %}
+	{% endif %}
+	{% if cms.auth.canAccessCollection('info', 'update') %}
+		{% set jobs = jobs|merge([{label: 'Update hours and info', url: 'collections/info/info', icon: 'edit'}]) %}
+	{% endif %}
+	{% if cms.auth.canAccessCollection('gallery', 'update') %}
+		{% set jobs = jobs|merge([{label: 'Update the gallery', url: 'collections/gallery/restaurant', icon: 'gallery'}]) %}
+	{% endif %}
+
+	<div class="dashboard-section">
+		<h2>What do you need to do?</h2>
+		<div class="quick-actions">
+			{% for job in jobs %}
+				<a href="{{ job.url }}" class="action-button">
+					<span class="action-icon" style="--action-icon: var(--icon-{{ job.icon }})"></span>
+					<span class="action-text">{{ job.label }}</span>
+				</a>
+			{% endfor %}
+			<a href="/" target="_blank" rel="noopener" class="action-button">
+				<span class="action-icon" style="--action-icon: var(--icon-eye)"></span>
+				<span class="action-text">View the website</span>
+			</a>
+		</div>
+	</div>
+
+	<div class="dashboard-grid">
+		<div class="dashboard-main">
+			<div class="dashboard-section">
+				<h2>Today's specials</h2>
+				{% if specials is empty %}
+					<p>Nothing is running today, so the specials box is hidden on the website.</p>
+				{% else %}
+					<ul class="client-home-list">
+						{% for special in specials %}
+							<li>
+								{% if canSpecials %}
+									<a href="collections/specials/{{ special.id|url_encode }}">{{ special.title }}</a>
+								{% else %}
+									{{ special.title }}
+								{% endif %}
+								<span>{{ special.price|price }} &middot; until {{ special.endDate|date('F j, Y', false) }}</span>
+							</li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+			</div>
+
+			{% if canMenu or canSpecials %}
+				{% if (canSpecials and endingSoon is not empty) or (canMenu and noPhoto is not empty) %}
+					<div class="dashboard-section">
+						<h2>Worth a look</h2>
+						<ul class="client-home-list">
+							{% if canSpecials %}
+								{% for special in endingSoon %}
+									<li>
+										<a href="collections/specials/{{ special.id|url_encode }}">{{ special.title }}</a>
+										<span>Ends {{ special.endDate|date('l', false) }}, so plan what comes next</span>
+									</li>
+								{% endfor %}
+							{% endif %}
+							{% if canMenu %}
+								{% for dish in noPhoto|slice(0, 5) %}
+									<li>
+										<a href="collections/menu/{{ dish.id|url_encode }}">{{ dish.name }}</a>
+										<span>No photo yet</span>
+									</li>
+								{% endfor %}
+								{% if noPhoto|length > 5 %}
+									<li><span>And {{ noPhoto|length - 5 }} more dishes without a photo</span></li>
+								{% endif %}
+							{% endif %}
+						</ul>
+					</div>
+				{% endif %}
+			{% endif %}
+		</div>
+
+		<div class="dashboard-sidebar">
+			{% if cms.auth.canAccessExtension('totalcms/client-help') %}
+				<div class="dashboard-section client-home-help">
+					<h2>Need a hand?</h2>
+					<ul class="client-home-list">
+						<li><a href="ext/totalcms/client-help/post/start-here">Start here</a></li>
+						<li><a href="ext/totalcms/client-help/post/change-a-price">Change a price</a></li>
+						<li><a href="ext/totalcms/client-help/post/add-a-weekly-special">Add a weekly special</a></li>
+						<li><a href="ext/totalcms/client-help/home">All how-tos</a></li>
+					</ul>
+					<p>Still stuck? Text Sam at <a href="sms:+12075550188">(207) 555-0188</a>.</p>
+				</div>
+			{% endif %}
+		</div>
+	</div>
+
+	</div>
+
+	<style>
+		.client-home-today .stat-value { white-space: nowrap; }
+		.client-home-today .stat-label { margin-block-end: .25rem; }
+		.dash-main-content .client-home-list { list-style: none; margin: 0; padding: 0; max-width: none; }
+		.client-home-list li {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			gap: .25rem 1rem;
+			padding-block: .625rem;
+			border-block-end: 1px solid oklch(var(--totalform-border-color));
+		}
+		.client-home-list li:last-child { border-block-end: 0; }
+		.client-home-list span { opacity: .75; }
+		.client-home-help a { color: oklch(var(--totalform-accent)); }
+		.client-home-list a:hover { color: oklch(var(--totalform-accent)); }
+		.client-home-today .stat-card:first-child { border-color: oklch(var(--totalform-accent) / .6); }
+		.client-home .action-button:hover .action-icon { background-color: oklch(var(--totalform-accent)); }
+		.client-home-help {
+			background: oklch(var(--totalform-accent) / .1);
+			border-inline-start: 3px solid oklch(var(--totalform-accent));
+		}
+	</style>
+{% endif %}

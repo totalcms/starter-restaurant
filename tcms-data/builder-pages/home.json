@@ -1,0 +1,62 @@
+{
+    "id": "home",
+    "title": "Home",
+    "route": "/",
+    "template": "index",
+    "draft": false,
+    "nav": true,
+    "data": [],
+    "middleware": [],
+    "accessGroups": [],
+    "accessCollection": "",
+    "status": 200,
+    "redirectTo": "",
+    "sitemap": true,
+    "changeFrequency": "",
+    "priority": 0,
+    "updated": "2026-11-09T23:44:36-05:00",
+    "created": "2026-10-29T06:32:21+00:00",
+    "seo": {
+        "id": "seo",
+        "title": "Copper Thistle | Wood-Fired Restaurant in Portland, Maine",
+        "socialTitle": "Copper Thistle",
+        "description": "Seasonal cooking from a wood-fired kitchen on Harbor Street in Portland, Maine. See the menu, today's specials and opening hours, and book a table.",
+        "socialDescription": "Seasonal cooking from a wood-fired kitchen on Harbor Street in Portland, Maine.",
+        "image": {
+            "alt": "The dining room at Copper Thistle, with wood tables and warm evening light",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "",
+            "height": 1600,
+            "link": "",
+            "mime": "image/jpeg",
+            "name": "01-hero.jpg",
+            "palette": [
+                "#2d180b",
+                "#f9d39b",
+                "#831c05",
+                "#eaa254",
+                "#90a6b5"
+            ],
+            "size": 517536,
+            "tags": [],
+            "uploadDate": "2026-11-05T04:53:15+00:00",
+            "width": 2400,
+            "credit": {
+                "author": "Jonathan Borba",
+                "source": "Pexels",
+                "sourceUrl": "https://www.pexels.com/photo/interior-of-restaurant-14590691/",
+                "license": "Pexels License"
+            }
+        },
+        "noindex": false,
+        "nofollow": false,
+        "jsonldType": ""
+    }
+}

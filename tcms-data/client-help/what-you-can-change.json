@@ -1,0 +1,42 @@
+{
+    "id": "what-you-can-change",
+    "summary": "What's yours to update, and what to send to me.",
+    "content": "## Yours to change\n\n- Prices, names and descriptions on the menu\n- Photos of each dish\n- New dishes\n- Weekly specials\n- Which dishes are featured on the home page\n\n## Send these to me\n\nThese take me a few minutes, and they're included in [your care plan](ext/totalcms/client-help/post/your-care-plan):\n\n- [Hours, holidays and closures](ext/totalcms/client-help/post/holiday-hours-and-closures)\n- Your address, phone number and reservation link\n- The About page and the gallery\n- Taking a dish off the menu\n- Anything to do with the design or layout\n\nWhen in doubt, text me. A quick question is always better than a guess.",
+    "extra": "",
+    "draft": false,
+    "featured": false,
+    "title": "What you can change yourself",
+    "date": "2026-11-02T00:00:00+00:00",
+    "author": "Sam Keller",
+    "media": "",
+    "categories": [
+        "Getting Started"
+    ],
+    "tags": [
+        "basics"
+    ],
+    "image": {
+        "alt": "",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "0b9e9d46",
+        "height": 0,
+        "link": "",
+        "mime": "",
+        "name": "",
+        "palette": [],
+        "size": 0,
+        "tags": [],
+        "uploadDate": "2026-11-05T18:45:13+00:00",
+        "width": 0
+    },
+    "gallery": [],
+    "updated": "2026-11-05T18:45:13+00:00",
+    "created": "2026-11-05T18:45:13+00:00"
+}

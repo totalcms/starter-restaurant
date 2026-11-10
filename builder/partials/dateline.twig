@@ -1,0 +1,28 @@
+{#
+	The date line at the top of the home page, like the date printed on a
+	day's menu: today's date, then today's hours from the Hours table in
+	Restaurant Info. It is worked out on every visit, so there is nothing to edit.
+
+	The date uses the site's time zone (Settings in the admin). A day is matched
+	by its name, so keep the Day column in Hours spelled out ("Tuesday").
+#}
+{% set today = info.hours|filter(row => row.day|lower == 'now'|date('l')|lower)|first %}
+
+<p class="divider bill-dateline">
+	{# Two pieces that each stay on one line; on a phone the hours move under the date and the dot hides. #}
+	<span>
+		<time datetime="{{ 'now'|date('Y-m-d') }}">{{ 'now'|date('l, F j') }}</time>
+		{% if today %}
+			<span class="bill-dateline-dot" aria-hidden="true">&middot;</span>
+			<span>
+				{% if today.closed %}
+					Closed today
+				{% else %}
+					{# Opening at 4 pm or later reads as "tonight". #}
+					{# data-nowrap keeps the times on one line together. #}
+					Open {{ today.opens >= '16:00' ? 'tonight' : 'today' }} <span data-nowrap>{{ today.opens|date('g:i') }} &ndash; {{ today.closes|date('g:i a') }}</span>
+				{% endif %}
+			</span>
+		{% endif %}
+	</span>
+</p>

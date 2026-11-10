@@ -1,0 +1,48 @@
+{
+    "id": "wood-fired-half-chicken",
+    "name": "Wood-fired Half Chicken",
+    "section": "Mains",
+    "price": 34,
+    "description": "Brined for a day and roasted over oak, served in its own golden pan juices.",
+    "dietary": [
+        "Gluten-free"
+    ],
+    "image": {
+        "alt": "Golden roast chicken in its pan juices",
+        "exif": {
+            "author": "maksim goncharenok",
+            "copyright": "maksgelatin"
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "e878b306",
+        "height": 1600,
+        "link": "",
+        "mime": "image/jpeg",
+        "name": "pexels-photo-6163330.jpeg",
+        "palette": [
+            "#d7d0c1",
+            "#47260c",
+            "#cd801c",
+            "#8f4c0a",
+            "#bf9f74"
+        ],
+        "size": 398509,
+        "tags": [],
+        "uploadDate": "2026-10-30T03:48:00-04:00",
+        "width": 2400,
+        "credit": {
+            "author": "Maksim Goncharenok",
+            "source": "Pexels",
+            "sourceUrl": "https://www.pexels.com/photo/roasted-chicken-on-a-white-plate-6163330/",
+            "license": "Pexels License"
+        }
+    },
+    "featured": true,
+    "order": 1,
+    "updated": "2026-11-09T23:44:39-05:00",
+    "created": "2026-10-29T06:38:00-04:00"
+}

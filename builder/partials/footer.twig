@@ -1,0 +1,34 @@
+{#
+	The footer on every page, printed on the colored cover below the menu card:
+	address, contact and hours, all from Restaurant Info.
+	"box" pads it top and bottom; "center" supplies the side gutters.
+#}
+<footer class="box" data-gap="xl" data-gap-inline="none">
+	<div class="center stack" data-gap="xl">
+		{# Three columns side by side on a wide screen, stacked on a phone. #}
+		<div class="columns" data-threshold="sm" data-gap="2xl">
+			<div class="stack" data-gap="sm">
+				<h2>{{ info.name }}</h2>
+				{# nl2br keeps the line breaks typed into the address field. #}
+				<address>{{ info.address|nl2br }}</address>
+				{% if info.mapUrl %}<a href="{{ info.mapUrl }}">Get directions</a>{% endif %}
+			</div>
+
+			<div class="stack" data-gap="sm">
+				<h2>Contact</h2>
+				{% if info.phone %}<a href="tel:{{ info.phone|replace({' ': '', '(': '', ')': '', '-': ''}) }}">{{ info.phone }}</a>{% endif %}
+				{% if info.email %}<a href="mailto:{{ info.email }}">{{ info.email }}</a>{% endif %}
+			</div>
+
+			<div class="stack" data-gap="sm">
+				<h2>Hours</h2>
+				{% include 'partials/hours.twig' with {compact: true} %}
+			</div>
+		</div>
+
+		<div class="cluster" data-justify="between" data-gap="sm">
+			<small>&copy; {{ 'now'|date('Y') }} {{ info.name }}</small>
+			{{ cms.badge.text({theme: 'mono'}) }}
+		</div>
+	</div>
+</footer>

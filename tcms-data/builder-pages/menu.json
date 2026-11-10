@@ -1,0 +1,63 @@
+{
+    "id": "menu",
+    "title": "Menu",
+    "route": "/menu",
+    "template": "menu",
+    "draft": false,
+    "nav": true,
+    "data": [],
+    "middleware": [],
+    "accessGroups": [],
+    "accessCollection": "",
+    "status": 200,
+    "redirectTo": "",
+    "sitemap": true,
+    "changeFrequency": "",
+    "priority": 0,
+    "updated": "2026-11-09T23:44:36-05:00",
+    "created": "2026-10-29T06:41:29+00:00",
+    "seo": {
+        "id": "seo",
+        "title": "Seasonal Menu | Copper Thistle, Portland, Maine",
+        "socialTitle": "The Copper Thistle Menu",
+        "description": "Day-boat scallops, wood-fired half chicken, hanger steak frites and more. See Copper Thistle's full seasonal menu, with cocktails and desserts.",
+        "socialDescription": "What the wood oven, the boats and the farms are giving us right now.",
+        "image": {
+            "alt": "A bowl of spinach pappardelle with chanterelles and basil",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "",
+            "height": 1800,
+            "link": "",
+            "mime": "image/jpeg",
+            "name": "08-pasta.jpg",
+            "palette": [
+                "#c5bdb3",
+                "#bcaf9b",
+                "#693711",
+                "#2c271c",
+                "#9d7c33"
+            ],
+            "size": 468407,
+            "tags": [],
+            "uploadDate": "2026-11-05T04:53:15+00:00",
+            "width": 2400,
+            "credit": {
+                "author": "Nadin Sh",
+                "authorUrl": "https://www.pexels.com/@nadin-sh-78971847/",
+                "source": "Pexels",
+                "sourceUrl": "https://www.pexels.com/photo/a-bowl-of-pasta-with-greens-and-cheese-27298485/",
+                "license": "Pexels License"
+            }
+        },
+        "noindex": false,
+        "nofollow": false,
+        "jsonldType": ""
+    }
+}

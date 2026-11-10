@@ -1,0 +1,47 @@
+{
+    "i18n": {
+        "default": "en_US"
+    },
+    "siteName": "Copper Thistle",
+    "sentry": false,
+    "smtp": {
+        "host": "",
+        "port": "25",
+        "secure": "tls",
+        "username": "",
+        "password": "",
+        "from": "",
+        "fromName": "",
+        "to": "",
+        "sendDelay": 0,
+        "maxPerHour": 0,
+        "maxPerDay": 0
+    },
+    "dashboard": {
+        "title": "Copper Thistle Admin",
+        "pagination": 50,
+        "confirmCountdown": 2,
+        "accent": "#f97318",
+        "keepIdOnDuplicate": false,
+        "fullWidthForms": false,
+        "inlineEditing": true,
+        "quickActions": [
+            "new-collection",
+            "new-schema",
+            "new-template",
+            "logs",
+            "jobqueue",
+            "cache-manager"
+        ],
+        "moreMenu": [
+            "dataviews",
+            "mailer",
+            "automations"
+        ]
+    },
+    "env": "dev",
+    "timezone": "America/New_York",
+    "notfound": "/404",
+    "maxDownloadSize": 2048,
+    "appLogLevel": "info"
+}

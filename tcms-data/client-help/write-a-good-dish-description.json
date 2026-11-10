@@ -1,0 +1,43 @@
+{
+    "id": "write-a-good-dish-description",
+    "summary": "The house style for menu copy, so new dishes match the rest.",
+    "content": "Copper Thistle's menu is short and plain. Name the main ingredients and how they're cooked, then stop.\n\n## A simple pattern\n\nMain ingredient, how it's cooked, then what comes with it.\n\n> Grilled hanger steak, hand-cut fries and green peppercorn sauce.\n\n## House rules\n\n- Keep it to one sentence.\n- Skip words like \"delicious\", \"mouth-watering\" and \"world-famous\". Let the food do the work.\n- Say where something comes from if it's local and it matters.\n- List anything a guest would want to know before ordering, such as nuts or shellfish.\n- End with a period, so every line on the menu matches.",
+    "extra": "",
+    "draft": false,
+    "featured": false,
+    "title": "Write a good dish description",
+    "date": "2026-11-02T00:00:00+00:00",
+    "author": "Sam Keller",
+    "media": "",
+    "categories": [
+        "Menu"
+    ],
+    "tags": [
+        "menu",
+        "writing"
+    ],
+    "image": {
+        "alt": "",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "0b9e9d46",
+        "height": 0,
+        "link": "",
+        "mime": "",
+        "name": "",
+        "palette": [],
+        "size": 0,
+        "tags": [],
+        "uploadDate": "2026-11-05T18:45:15+00:00",
+        "width": 0
+    },
+    "gallery": [],
+    "updated": "2026-11-05T18:45:15+00:00",
+    "created": "2026-11-05T18:45:15+00:00"
+}

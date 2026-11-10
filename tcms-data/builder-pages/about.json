@@ -1,0 +1,62 @@
+{
+    "id": "about",
+    "title": "About",
+    "route": "/about",
+    "template": "about",
+    "draft": false,
+    "nav": true,
+    "data": [],
+    "middleware": [],
+    "accessGroups": [],
+    "accessCollection": "",
+    "status": 200,
+    "redirectTo": "",
+    "sitemap": true,
+    "changeFrequency": "",
+    "priority": 0,
+    "updated": "2026-11-09T23:44:35-05:00",
+    "created": "2026-10-29T06:41:30+00:00",
+    "seo": {
+        "id": "seo",
+        "title": "Our Story | Copper Thistle, Portland, Maine",
+        "socialTitle": "The Copper Thistle Story",
+        "description": "Copper Thistle opened in 2019 in a former ship chandlery on Harbor Street. Chef Maria Alvarez cooks with what Portland's boats and farms bring in.",
+        "socialDescription": "One wood-fired oven, a former ship chandlery, and a menu that follows the season.",
+        "image": {
+            "alt": "The chef sliding a peel into the wood-fired oven",
+            "exif": {
+                "copyright": "All rights reserved"
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 72,
+                "y": 66
+            },
+            "hash": "",
+            "height": 1602,
+            "link": "",
+            "mime": "image/jpeg",
+            "name": "03-chef.jpg",
+            "palette": [
+                "#515964",
+                "#7e8186",
+                "#beaca0",
+                "#e0b2a1",
+                "#e1d7d2"
+            ],
+            "size": 154616,
+            "tags": [],
+            "uploadDate": "2026-11-05T04:53:16+00:00",
+            "width": 2400,
+            "credit": {
+                "author": "Kampus Production",
+                "source": "Pexels",
+                "sourceUrl": "https://www.pexels.com/photo/man-looking-into-oven-6605187/",
+                "license": "Pexels License"
+            }
+        },
+        "noindex": false,
+        "nofollow": false,
+        "jsonldType": ""
+    }
+}

@@ -1,0 +1,141 @@
+{
+    "totalcms/ab-split": {
+        "enabled": false,
+        "installed_at": "2026-10-29T06:32:20+00:00",
+        "version": "3.6.4",
+        "error": null,
+        "permissions": [],
+        "quarantine": null,
+        "updateDisabled": null,
+        "autoEnrolledBundled": false,
+        "approvedFindings": null
+    },
+    "totalcms/algolia-search": {
+        "enabled": false,
+        "installed_at": "2026-10-29T06:32:20+00:00",
+        "version": "3.6.4",
+        "error": null,
+        "permissions": [],
+        "quarantine": null,
+        "updateDisabled": null,
+        "autoEnrolledBundled": false,
+        "approvedFindings": null
+    },
+    "totalcms/docs": {
+        "enabled": true,
+        "installed_at": "2026-10-29T06:32:20+00:00",
+        "version": "3.6.4",
+        "error": null,
+        "permissions": {
+            "mcp:tools": true,
+            "mcp:prompts": true
+        },
+        "quarantine": null,
+        "updateDisabled": null,
+        "autoEnrolledBundled": true,
+        "approvedFindings": null
+    },
+    "totalcms/geo-redirect": {
+        "enabled": false,
+        "installed_at": "2026-10-29T06:32:20+00:00",
+        "version": "3.6.4",
+        "error": null,
+        "permissions": [],
+        "quarantine": null,
+        "updateDisabled": null,
+        "autoEnrolledBundled": false,
+        "approvedFindings": null
+    },
+    "totalcms/maintenance": {
+        "enabled": false,
+        "installed_at": "2026-10-29T06:32:20+00:00",
+        "version": "3.6.4",
+        "error": null,
+        "permissions": [],
+        "quarantine": null,
+        "updateDisabled": null,
+        "autoEnrolledBundled": false,
+        "approvedFindings": null
+    },
+    "totalcms/podcast": {
+        "enabled": false,
+        "installed_at": "2026-10-29T06:32:20+00:00",
+        "version": "3.6.4",
+        "error": null,
+        "permissions": [],
+        "quarantine": null,
+        "updateDisabled": null,
+        "autoEnrolledBundled": false,
+        "approvedFindings": null
+    },
+    "totalcms/protect": {
+        "enabled": false,
+        "installed_at": "2026-10-29T06:32:20+00:00",
+        "version": "3.6.4",
+        "error": null,
+        "permissions": [],
+        "quarantine": null,
+        "updateDisabled": null,
+        "autoEnrolledBundled": false,
+        "approvedFindings": null
+    },
+    "totalcms/pushover": {
+        "enabled": false,
+        "installed_at": "2026-10-29T06:32:20+00:00",
+        "version": "3.6.4",
+        "error": null,
+        "permissions": [],
+        "quarantine": null,
+        "updateDisabled": null,
+        "autoEnrolledBundled": false,
+        "approvedFindings": null
+    },
+    "totalcms/scheduled": {
+        "enabled": false,
+        "installed_at": "2026-10-29T06:32:20+00:00",
+        "version": "3.6.4",
+        "error": null,
+        "permissions": [],
+        "quarantine": null,
+        "updateDisabled": null,
+        "autoEnrolledBundled": false,
+        "approvedFindings": null
+    },
+    "totalcms/webmcp": {
+        "enabled": false,
+        "installed_at": "2026-10-29T06:32:20+00:00",
+        "version": "3.6.4",
+        "error": null,
+        "permissions": [],
+        "quarantine": null,
+        "updateDisabled": null,
+        "autoEnrolledBundled": false,
+        "approvedFindings": null
+    },
+    "totalcms/stock-photos": {
+        "enabled": false,
+        "installed_at": "2026-10-30T03:46:47+00:00",
+        "version": "3.6.4",
+        "error": null,
+        "permissions": [],
+        "quarantine": null,
+        "updateDisabled": null,
+        "autoEnrolledBundled": false,
+        "approvedFindings": null
+    },
+    "totalcms/client-help": {
+        "enabled": true,
+        "installed_at": "2026-11-05T18:34:01+00:00",
+        "version": "3.6.7",
+        "error": null,
+        "permissions": {
+            "routes:admin": true,
+            "admin:nav": true,
+            "container": true
+        },
+        "quarantine": null,
+        "updateDisabled": null,
+        "autoEnrolledBundled": false,
+        "approvedFindings": []
+    }
+}

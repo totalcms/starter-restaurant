@@ -1,0 +1,48 @@
+{
+    "id": "burrata-roasted-grapes",
+    "name": "Burrata & Grilled Sourdough",
+    "section": "Starters",
+    "price": 17,
+    "description": "Creamy burrata with basil, chili oil, toasted crumbs and grilled sourdough.",
+    "dietary": [
+        "Vegetarian"
+    ],
+    "image": {
+        "alt": "Burrata with basil, chili oil and a slice of grilled sourdough",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "0262fd88",
+        "height": 1800,
+        "link": "",
+        "mime": "image/jpeg",
+        "name": "pexels-photo-25650514.jpeg",
+        "palette": [
+            "#bdad96",
+            "#1d1712",
+            "#d4c5ab",
+            "#814515",
+            "#d2a05a"
+        ],
+        "size": 419159,
+        "tags": [],
+        "uploadDate": "2026-10-30T03:48:00+00:00",
+        "width": 2400,
+        "credit": {
+            "author": "Nadin Sh",
+            "authorUrl": "https://www.pexels.com/@nadin-sh-78971847/",
+            "source": "Pexels",
+            "sourceUrl": "https://www.pexels.com/photo/burrata-cheese-with-herbs-and-a-slice-of-bread-25650514/",
+            "license": "Pexels License"
+        }
+    },
+    "featured": true,
+    "order": 2,
+    "updated": "2026-11-09T23:44:38-05:00",
+    "created": "2026-10-29T06:38:44+00:00"
+}

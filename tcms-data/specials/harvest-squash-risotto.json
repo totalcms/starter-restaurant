@@ -1,0 +1,44 @@
+{
+    "id": "harvest-squash-risotto",
+    "title": "Harvest Squash Risotto",
+    "startDate": "2026-09-15T00:00:00+00:00",
+    "endDate": "2036-11-30T00:00:00+00:00",
+    "price": 24,
+    "description": "Roasted butternut squash and Maine shrimp, sage brown butter and toasted pepitas, finished with aged parmesan.",
+    "image": {
+        "alt": "Butternut squash risotto with shrimp and toasted pepitas",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "7c96e7ea",
+        "height": 3200,
+        "link": "",
+        "mime": "image/jpeg",
+        "name": "pexels-photo-26219974.jpeg",
+        "palette": [
+            "#5f310c",
+            "#e2a13f",
+            "#8e5d12",
+            "#a79f93",
+            "#d7d1cd"
+        ],
+        "size": 1037152,
+        "tags": [],
+        "uploadDate": "2026-10-30T03:48:45+00:00",
+        "width": 2400,
+        "credit": {
+            "author": "\u041a\u0430\u0440\u0438\u043d\u0430 \u0421\u0443\u0445\u043e\u0432\u0435\u0440\u0445\u0430\u044f",
+            "authorUrl": "https://www.pexels.com/@1391650555/",
+            "source": "Pexels",
+            "sourceUrl": "https://www.pexels.com/photo/close-up-of-food-on-plate-26219974/",
+            "license": "Pexels License"
+        }
+    },
+    "updated": "2026-11-09T23:44:40-05:00",
+    "created": "2026-10-29T06:38:45+00:00"
+}

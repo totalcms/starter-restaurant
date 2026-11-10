@@ -1,0 +1,42 @@
+{
+    "id": "add-a-new-dish",
+    "summary": "Put a new item on the menu, in the right section.",
+    "content": "1. In the sidebar on the far left, select the **Collections** icon, then **Menu**.\n2. At the top right, select **+ New Object**.\n3. Fill in **Name**, **Menu Section**, **Price** and **Description**.\n4. Tick anything that applies under **Dietary**.\n5. Add a **Photo** if you have one. A dish without a photo still looks fine on the menu.\n6. Set **Order**. Lower numbers appear first within a section.\n7. Scroll to the bottom and select **Save**.\n\n## Put it on the home page\n\nTurn on **Featured** and the dish appears under \"From the kitchen\" on the home page. Three or four featured dishes look best, so turn one off when you turn one on.\n\nNot sure what to write? Read [Write a good dish description](ext/totalcms/client-help/post/write-a-good-dish-description).",
+    "extra": "",
+    "draft": false,
+    "featured": false,
+    "title": "Add a new dish",
+    "date": "2026-11-02T00:00:00+00:00",
+    "author": "Sam Keller",
+    "media": "",
+    "categories": [
+        "Menu"
+    ],
+    "tags": [
+        "menu"
+    ],
+    "image": {
+        "alt": "",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "0b9e9d46",
+        "height": 0,
+        "link": "",
+        "mime": "",
+        "name": "",
+        "palette": [],
+        "size": 0,
+        "tags": [],
+        "uploadDate": "2026-11-05T18:45:14+00:00",
+        "width": 0
+    },
+    "gallery": [],
+    "updated": "2026-11-05T18:46:15+00:00",
+    "created": "2026-11-05T18:45:14+00:00"
+}

@@ -1,0 +1,23 @@
+{#
+	Photo gallery: the "restaurant" gallery in the Gallery collection.
+	Total CMS renders the grid and the click-to-enlarge lightbox; upload,
+	caption and reorder the photos in the admin.
+#}
+{% extends 'layouts/default.twig' %}
+
+{% block content %}
+	<section class="center" data-max="2xl" aria-labelledby="gallery-heading">
+		<div class="stack" data-gap="2xl">
+			<header class="bill-masthead" data-size="page">
+				<h1 id="gallery-heading">Gallery</h1>
+				<p class="lede">The dining room, the kitchen, and a few of our favorite plates.</p>
+			</header>
+			{#
+				Thumbnails 600×450, opening to 1600 wide in the lightbox.
+				zoomFromOrigin is off because the thumbnails are cropped: growing one
+				into a photo of a different shape stretches it while it opens.
+			#}
+			{{ cms.render.gallery('restaurant', {w: 600, h: 450, fit: 'crop'}, {w: 1600}, {zoomFromOrigin: false}) }}
+		</div>
+	</section>
+{% endblock %}

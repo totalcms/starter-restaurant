@@ -1,0 +1,32 @@
+{
+    "id": "watermarks",
+    "gallery": [
+        {
+            "alt": "",
+            "exif": {
+                "nodata": ""
+            },
+            "featured": false,
+            "focalpoint": {
+                "x": 50,
+                "y": 50
+            },
+            "hash": "c4a9a970",
+            "height": 226,
+            "link": "",
+            "mime": "image/png",
+            "name": "logo.png",
+            "palette": [
+                "#ecfcf4",
+                "#ec9c6c",
+                "#ecffd0",
+                "#ecffd0",
+                "#ecffd0"
+            ],
+            "size": 10474,
+            "tags": [],
+            "uploadDate": "2026-11-04T17:14:04+00:00",
+            "width": 1141
+        }
+    ]
+}

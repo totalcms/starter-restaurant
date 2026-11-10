@@ -1,0 +1,45 @@
+{
+    "id": "juniper-gin-spritz",
+    "name": "Juniper Gin Spritz",
+    "section": "Drinks",
+    "price": 14,
+    "description": "Local gin, elderflower, grapefruit and sparkling wine.",
+    "dietary": [],
+    "image": {
+        "alt": "A grapefruit gin spritz on a weathered wooden bench",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "38e926c6",
+        "height": 1600,
+        "link": "",
+        "mime": "image/jpeg",
+        "name": "pexels-photo-18347939.jpeg",
+        "palette": [
+            "#dbccd8",
+            "#898377",
+            "#3c4645",
+            "#e9bba4",
+            "#b2a08f"
+        ],
+        "size": 189152,
+        "tags": [],
+        "uploadDate": "2026-10-30T03:48:37+00:00",
+        "width": 2400,
+        "credit": {
+            "author": "Tim Durand",
+            "source": "Pexels",
+            "sourceUrl": "https://www.pexels.com/photo/cocktail-with-fruit-slice-in-glass-on-wooden-table-18347939/",
+            "license": "Pexels License"
+        }
+    },
+    "featured": false,
+    "order": 1,
+    "updated": "2026-11-09T23:44:39-05:00",
+    "created": "2026-10-29T06:38:44+00:00"
+}

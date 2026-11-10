@@ -1,0 +1,48 @@
+{
+    "id": "pan-seared-scallops",
+    "name": "Pan-seared Scallops",
+    "section": "Mains",
+    "price": 40,
+    "description": "Day-boat scallops on silky parsnip pur\u00e9e with chanterelles and brown butter.",
+    "dietary": [
+        "Gluten-free"
+    ],
+    "image": {
+        "alt": "A seared scallop on parsnip pur\u00e9e with chanterelles",
+        "exif": {
+            "nodata": ""
+        },
+        "featured": false,
+        "focalpoint": {
+            "x": 50,
+            "y": 50
+        },
+        "hash": "7e8ead4a",
+        "height": 3200,
+        "link": "",
+        "mime": "image/jpeg",
+        "name": "pexels-photo-39444297.jpeg",
+        "palette": [
+            "#cacbb7",
+            "#aeb7ad",
+            "#8b6c46",
+            "#878f8a",
+            "#625f42"
+        ],
+        "size": 388729,
+        "tags": [],
+        "uploadDate": "2026-10-30T03:48:38+00:00",
+        "width": 2400,
+        "credit": {
+            "author": "Nadin Sh",
+            "authorUrl": "https://www.pexels.com/@nadin-sh-78971847/",
+            "source": "Pexels",
+            "sourceUrl": "https://www.pexels.com/photo/gourmet-dish-with-seared-scallop-and-chanterelles-39444297/",
+            "license": "Pexels License"
+        }
+    },
+    "featured": true,
+    "order": 2,
+    "updated": "2026-11-09T23:44:39-05:00",
+    "created": "2026-10-29T06:38:44+00:00"
+}
